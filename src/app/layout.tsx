@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import {NextUIProvider} from "@nextui-org/system";
 import I18nProvider from './I18nProvider';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-          <I18nProvider>
-            {children}
-          </I18nProvider>
+          <NextUIProvider>
+            <I18nProvider>
+                {children}
+            </I18nProvider>
+          </NextUIProvider>
       </body>
     </html>
   )

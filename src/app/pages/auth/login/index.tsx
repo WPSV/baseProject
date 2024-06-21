@@ -1,34 +1,97 @@
 'use client'
 
-import Button from '../../../../shared/components/Button'
-import { SignIn } from '@phosphor-icons/react'
+import {EnvelopeSimple, Lock} from '@phosphor-icons/react'
 import AuthLayout from '../../../../layouts/AuthLayout';
 import LanguageSwitcher from "../../../../shared/components/LanguageSwitcher";
 import { useTranslation } from "next-i18next";
+import {Input, Link, Button} from "@nextui-org/react";
 
 export default function Login() {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  return (
-    <main>
-      <AuthLayout>
-        <LanguageSwitcher/>
-        <div>
-          {t('formDescription')} <br/>
-          <Button
-              width="w-btn"
-              height="h-14"
-              color="text-primary"
-              fontSize="text-base"
-              backgroundColor="bg-light"
-              border="border border-solid border-primary"
-          >
-            <SignIn size={24}/>
-            {t('login')}
-          </Button>
-        </div>
-
-      </AuthLayout>
-    </main>
-  )
+    return (
+        <main>
+            <AuthLayout>
+                <div className="absolute top-[5px] right-[17px] cursor-pointer">
+                    <LanguageSwitcher/>
+                </div>
+                <div className="flex flex-col items-center bg-light w-[534px] h-[736px] rounded-[24px] p-[40px_calc((534px-406px)/2)] text-center">
+                    <img className="mt-0 mx-auto mb-[50px]" src="/assets/logoForm.svg" alt="Logo"/>
+                    <p className="text-2xl leading-[29px] text-darkPlus m-2.5">
+                        {t('title')}
+                    </p>
+                    <p className="text-xs font-normal leading-[18px] tracking-[0.04em] text-center text-input mb-10">
+                        {t('subTitle')}
+                    </p>
+                    <form>
+                        <Input
+                            type="email"
+                            placeholder={t('inputEmail')}
+                            endContent={<EnvelopeSimple size={32}/>}
+                            classNames={{
+                                base: [
+                                    "bg-light border border-solid border-outline rounded overflow-hidden mb-5",
+                                ],
+                                mainWrapper: [
+                                    "bg-light",
+                                ],
+                                inputWrapper: [
+                                    "data-[hover]:bg-light group-data-[focus]:bg-light bg-light h-14",
+                                ],
+                                innerWrapper: [
+                                    "bg-light",
+                                ],
+                                input: [
+                                    "focus:outline-none placeholder-input",
+                                ],
+                            }}
+                        />
+                        <Input
+                            type="password"
+                            placeholder={t('inputPassword')}
+                            endContent={<Lock size={32}/>}
+                            classNames={{
+                                base: [
+                                    "bg-light border border-solid border-outline rounded overflow-hidden mb-1",
+                                ],
+                                mainWrapper: [
+                                    "bg-light",
+                                ],
+                                inputWrapper: [
+                                    "data-[hover]:bg-light group-data-[focus]:bg-light bg-light h-14",
+                                ],
+                                innerWrapper: [
+                                    "bg-light",
+                                ],
+                                input: [
+                                    "focus:outline-none placeholder-input",
+                                ],
+                            }}
+                        />
+                        <div className="text-left mb-5">
+                            <Link href="/auth/forgot-password" className="text-xs leading-4 tracking-wider text-darkMinus" underline="always">
+                                {t('linkForgotPassword')}
+                            </Link>
+                        </div>
+                        <Button className="w-btn h-14 bg-primary border border-solid border-primary rounded-lg text-light text-sm font-bold ">
+                            {t('buttonText')}
+                        </Button>
+                        <p className="text-xs font-normal leading-[18px] tracking-[0.04em] my-5 text-center text-input">
+                            Ou
+                        </p>
+                        <Button className="w-full h-12 border bg-light border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-dark py-2.5">
+                            <img className="m-0" src="/assets/googleIcon.svg" alt="Google"/>
+                            {t('googleButtonText')}
+                        </Button>
+                        <Link href="#" className="text-xs leading-4 tracking-wider text-darkPlus mt-10">
+                            {t('registerMessage')} &nbsp;
+                            <span className="text-xs leading-4 tracking-wider text-primary underline">
+                                {t('linkRegister')}
+                            </span>
+                        </Link>
+                    </form>
+                </div>
+            </AuthLayout>
+        </main>
+    )
 }

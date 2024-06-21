@@ -8,7 +8,7 @@ i18n
         .use(LanguageDetector)
         .use(HttpBackend)
         .init({
-                debug: true,
+                debug: false,
                 fallbackLng: 'pt',
                 preload: ['en', 'pt', 'es'],
                 detection: {

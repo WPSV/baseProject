@@ -1,4 +1,11 @@
 {
-    "login": "Acceso",
-    "formDescription": "¡Por favor inicie sesión para continuar!"
+    "title": "¡Bienvenido!",
+    "subTitle": "Es hora de \"Impulsar tu inspiración\" con GT Group.",
+    "inputEmail": "Su e-mail",
+    "inputPassword": "Su contraseña",
+    "linkForgotPassword": "Olvide mi contraseña",
+    "buttonText": "Acceso",
+    "googleButtonText": "Iniciar sesión con Google",
+    "registerMessage": "¿No tienes una cuenta?",
+    "linkRegister": "¡Registrar aquí!"
 }
