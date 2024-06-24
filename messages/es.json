@@ -1,0 +1,22 @@
+{
+    "Login": {
+        "title": "¡Bienvenido!",
+        "subTitle": "Es hora de “Impulsar tu inspiración” con GT Group.",
+        "inputEmail": "Su e-mail",
+        "inputPassword": "Su contraseña",
+        "linkForgotPassword": "Olvide mi contraseña",
+        "buttonText": "Acceso",
+        "googleButtonText": "Iniciar sesión con Google",
+        "registerMessage": "¿No tienes una cuenta?",
+        "linkRegister": "¡Registrar aquí!"
+    },
+    "ForgotPassword": {
+        "title": "¿Perdiste tu contraseña?",
+        "subTitle": "Ingresa la dirección de correo electrónico registrada en tu cuenta y te enviaremos un enlace con instrucciones.",
+        "inputEmail": "Su e-mail",
+        "buttonText": "Enviar"
+    },
+    "NotFoundPage": {
+        "message": "¡404 Pagina no encontrada!"
+    }
+}

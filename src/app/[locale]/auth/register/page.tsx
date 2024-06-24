@@ -1,12 +1,10 @@
-'use client'
-
 import AuthLayout from "@/layouts/AuthLayout";
 
-export default function Index() {
+export default function Register() {
     return (
         <main>
             <AuthLayout>
-                Esqueceu a senha?
+                <div>Register</div>
             </AuthLayout>
         </main>
     )

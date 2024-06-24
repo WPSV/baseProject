@@ -1,4 +1,5 @@
 {
+  "Login": {
     "title": "Bem-vindo!",
     "subTitle": "Está na hora de “Boost your inspiration” com a GT Group.",
     "inputEmail": "Seu e-mail",
@@ -8,4 +9,14 @@
     "googleButtonText": "Login com o Google",
     "registerMessage": "Não possui uma conta?",
     "linkRegister": "Realize seu cadastro aqui!"
+  },
+  "ForgotPassword": {
+    "title": "Perdeu sua senha?",
+    "subTitle": "Informe o s-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.",
+    "inputEmail": "Seu email",
+    "buttonText": "Enviar"
+  },
+  "NotFoundPage": {
+    "message": "404 Página não encontrada!"
+  }
 }
