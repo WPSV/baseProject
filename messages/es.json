@@ -17,6 +17,9 @@
         "buttonText": "Enviar"
     },
     "NotFoundPage": {
-        "message": "¡404 Pagina no encontrada!"
+        "message": "¡Pagina no encontrada!"
+    },
+    "BackPage": {
+        "message": "Volver a home"
     }
 }

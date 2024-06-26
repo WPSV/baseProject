@@ -17,6 +17,9 @@
         "buttonText": "Submit"
     },
     "NotFoundPage": {
-        "message": "404 Page not found!"
+        "message": "Page not found!"
+    },
+    "BackPage": {
+        "message": "Back to home"
     }
 }
