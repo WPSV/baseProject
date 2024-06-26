@@ -19,6 +19,7 @@ export default function ForgotPassword() {
                     <p className="text-xs font-normal leading-[18px] tracking-[0.04em] text-center text-input mb-10">
                         {t('subTitle')}
                     </p>
+                    <EnvelopeSimple size={32}/>
                     <Input
                         type="email"
                         placeholder={t('inputEmail')}
