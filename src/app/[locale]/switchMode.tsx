@@ -13,9 +13,7 @@ const SwitchMode = () => {
   }, [])
 
   if(!mounted) return null
-
-  console.log(theme)
-
+  
   return(
     <div>
       <Switch 
