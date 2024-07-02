@@ -1,4 +1,4 @@
-import {createElement, ElementType, useState} from 'react';
+import { createElement, ElementType, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { CaretDown, CaretUp, CaretLeft, CaretRight, House, Note, Factory, Lightbulb, SignOut, Gear } from '@phosphor-icons/react';
 import Link from 'next/link';
@@ -6,8 +6,7 @@ import Image from 'next/image';
 import logotipo from '@/public/assets/logotipo.svg';
 import logotipoPequeno from '@/public/assets/logotipoPequeno.svg';
 import companyPlaceholder from '@/public/assets/companyPlaceholder.svg';
-import {ThemeSwitcher} from "@/shared/components/ThemeSwitcher";
-
+import { ThemeSwitcher } from "@/shared/components/ThemeSwitcher";
 
 const animationsConfig = {
     transitionDuration: 'duration-500',
@@ -17,7 +16,7 @@ const animationsConfig = {
 
 // Se true, usa botão para abrir/fechar, se false, usa hover
 const sidebarConfig = {
-    toggleButton: false,
+    toggleButton: true,
 };
 
 const textStyles = {
@@ -64,20 +63,7 @@ const Sidebar = () => {
             icon: Note,
             link: '/applications',
         },
-
     ];
-
-// Uso com dropdown itens abaixo
-//             name: 'Oportunidades',
-//             icon: Lightbulb,
-//             link: '/opportunities',
-//             dropdownItems: [
-//                 {
-//                     name: 'Minhas Oportunidades',
-//                     link: '/opportunities/mine',
-//                 },
-//             ]
-//         }
 
     const pathname = usePathname();
     const [openDropdowns, setOpenDropdowns] = useState<{ [key: string]: boolean }>({});
@@ -116,11 +102,11 @@ const Sidebar = () => {
     };
 
     return (
-        <div className="flex h-screen overflow-hidden">
+        <div className="flex h-screen">
             <aside
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className={`${sidebarOpen ? 'w-64' : 'w-16'} ${animationsConfig.transitionDuration} bg-dark text-white flex flex-col justify-between`}
+                className={`${sidebarOpen ? 'w-64' : 'w-16'} ${animationsConfig.transitionDuration} bg-dark text-white flex flex-col justify-between fixed h-screen`}
             >
                 <div className="flex flex-col h-full">
                     <div className="p-4 flex items-center justify-center h-20">
@@ -153,19 +139,18 @@ const Sidebar = () => {
                         {sidebarOpen ? (
                             <span
                                 className={`${textStyles.menuTitle.fontSize} ${textStyles.menuTitle.fontWeight} ${textStyles.menuTitle.letterSpacing} transition-opacity duration-500 opacity-100 whitespace-nowrap`}>
-            Sua empresa
-        </span>
+                                Sua empresa
+                            </span>
                         ) : null}
                     </div>
-
 
                     <div className="px-4 flex justify-between items-center">
                         {sidebarOpen ? (
                             <span
                                 className={`${textStyles.menuTitle.fontSize} h-5 ${textStyles.menuTitle.fontWeight} uppercase ${textStyles.menuTitle.letterSpacing} ${animationsConfig.animation} ${animationsConfig.transitionDuration} opacity-100`}
                             >
-            Menu
-        </span>
+                                Menu
+                            </span>
                         ) : (
                             <div
                                 className={`${animationsConfig.animation} hover:scale-125  ${animationsConfig.transitionDuration}`}>
@@ -195,8 +180,7 @@ const Sidebar = () => {
                         )}
                     </div>
 
-
-                    <nav className="flex-1 overflow-hidden">
+                    <nav className="flex-1 overflow-auto">
                         <ul className="space-y-2">
                             {menuItems.map((item, index) => {
                                 const isActive = pathname === item.link;
@@ -322,8 +306,8 @@ const Sidebar = () => {
                                 className={`${textStyles.menuItem.fontSize} font-semibold mb-2 text-left ${textStyles.menuItem.lineHeight} ${textStyles.menuItem.letterSpacing} transition-opacity duration-300 opacity-100`}>CONFIGURAÇÕES
                             </div>
                             <div className="flex items-center p-2 justify-between mb-4">
-                <span
-                    className={`${textStyles.menuItem.fontSize} whitespace-nowrap ${textStyles.menuItem.lineHeight} ${textStyles.menuItem.letterSpacing} ${animationsConfig.animation} ${animationsConfig.transitionDuration} ${sidebarOpen ? 'opacity-100' : ' opacity-0'}`}>Modo escuro</span>
+                                <span
+                                    className={`${textStyles.menuItem.fontSize} whitespace-nowrap ${textStyles.menuItem.lineHeight} ${textStyles.menuItem.letterSpacing} ${animationsConfig.animation} ${animationsConfig.transitionDuration} ${sidebarOpen ? 'opacity-100' : ' opacity-0'}`}>Modo escuro</span>
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <ThemeSwitcher/>
                                 </label>
@@ -352,23 +336,25 @@ const Sidebar = () => {
                             </div>
                             <button
                                 className={`w-full py-2 px-4 bg-error hover:bg-red-700 text-white rounded-lg flex items-center justify-center transition-transform duration-300 hover:scale-105 ${textStyles.menuItem.fontSize} ${textStyles.menuItem.lineHeight} ${textStyles.menuItem.letterSpacing}`}
-                                style={{width: '200px', height: '40px', padding: '12px 16px', gap: '16px'}}
+                                style={{ width: '200px', height: '40px', padding: '12px 16px', gap: '16px' }}
                             >
                                 <span
                                     className={`transition-opacity duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0'}`}>Sair</span>
-                                <SignOut size={24} className="ml-2"/>
+                                <SignOut size={24} className="ml-2" />
                             </button>
                         </>
                     ) : (
                         <div className={`flex items-center justify-center h-[56px]`}>
                             <Link href="/settings">
-                                <Gear size={32} className="text-white cursor-pointer"/>
+                                <Gear size={32} className="text-white cursor-pointer" />
                             </Link>
                         </div>
                     )}
                 </div>
-
             </aside>
+            <main className={`flex-1 ${sidebarOpen ? 'ml-64' : 'ml-16'} transition-all duration-500`}> {/* Add a left margin to the main content when the sidebar is open */}
+                {/* Your main content goes here */}
+            </main>
         </div>
     );
 };

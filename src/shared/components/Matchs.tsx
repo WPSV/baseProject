@@ -1,0 +1,79 @@
+"use client";
+
+import React from 'react';
+import { Card, CardBody } from "@nextui-org/react";
+import Image from 'next/image';
+import { CardData } from '@/shared/types/homepage';
+
+
+interface MatchsProps {
+    cardData?: CardData[];
+}
+
+const getButtonClass = (label: string): string => {
+    switch (label) {
+        case 'Match incerto':
+            return 'bg-warning text-black';
+        case 'Match ruim':
+            return 'bg-danger text-black';
+        case 'Match bom':
+            return 'bg-success text-black';
+        default:
+            return 'bg-gray-500 text-black'; // Default class if the label doesn't match any option
+    }
+};
+
+export default function Matchs({ cardData = [] }: MatchsProps): JSX.Element {
+    return (
+        <Card radius="lg" className="relative w-full bg-dark flex flex-col">
+            {cardData.length > 0 && (
+                <div className="flex justify-between p-5">
+                    <div>
+                        <h2 className="text-xl text-white font-bold">Seus matchs</h2>
+                        <p className="text-sm text-white">{cardData.length} matchs encontrados</p>
+                    </div>
+                    <a href="#" className="text-right text-white">Mostrar tudo</a>
+                </div>
+            )}
+            <CardBody className="text-left p-4 text-white flex-grow">
+                {cardData.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {cardData.map((item: CardData, index: number) => (
+                            <div key={index} className="flex h-full bg-darkMinus p-4 rounded-lg">
+                                <div className="flex-shrink-0 mr-4 flex items-center">
+                                    <Image
+                                        src={item.img}
+                                        alt="Match Image"
+                                        width={88}
+                                        height={116}
+                                        className="rounded-lg"
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-between w-[16.625rem] h-[7.25rem]">
+                                    <p className="font-bold text-white text-base uppercase break-words max-w-full">{item.title}</p>
+                                    <span className="text-default-400 text-xs">{item.description}</span>
+                                    <div className="px-0 flex">
+                                        <button
+                                            className={`${getButtonClass(item.buttonLabel)} text-xs rounded-full px-3 py-2`}>
+                                            {item.buttonLabel}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <>
+                        <div className="flex justify-between items-center">
+                            <div>
+                                <p className="text-default-500 text-xs">Calculando os possíveis matchs e oportunidades.</p>
+                            </div>
+                            <a href="#" className="text-right text-white">Mostrar tudo</a>
+                        </div>
+                        <div className="mt-auto h-2 bg-white rounded-full animate-pulse"></div>
+                    </>
+                )}
+            </CardBody>
+        </Card>
+    );
+}
