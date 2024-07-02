@@ -70,7 +70,7 @@ export default function Login() {
                   </Link>
                 </p>
                 <Button
-                  className="w-btn h-14 px-12  bg-primary border border-solid border-primary rounded-lg text-buttonText text-sm font-bold ">
+                  className="w-btn h-14 px-12 bg-buttonBg hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-buttonText text-sm font-bold ">
                   {t('buttonText')}
                 </Button>
                 <p className="text-xs font-normal leading-[18px] tracking-[0.04em] my-5 text-subtTitle text-center text-input">
