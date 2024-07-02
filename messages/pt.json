@@ -1,7 +1,7 @@
 {
   "Login": {
     "title": "Bem-vindo!",
-    "subTitle": "Está na hora de “Boost your inspiration” com a GT Group.",
+    "subTitle": "Está na hora de “Impulsionar sua aspiração” com a GT Group.",
     "inputEmail": "Seu e-mail",
     "inputPassword": "Sua senha",
     "linkForgotPassword": "Esqueci minha senha",
@@ -12,7 +12,7 @@
   },
   "ForgotPassword": {
     "title": "Perdeu sua senha?",
-    "subTitle": "Informe o s-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.",
+    "subTitle": "Informe o e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.",
     "inputEmail": "Seu email",
     "buttonText": "Enviar"
   },
