@@ -117,7 +117,7 @@ export default function CompanyResume({ company: initialCompany, description, ta
                     </div>
                 )}
                 <CardBody className="overflow-visible gap-2 py-2 px-0">
-                    <p className="text-default-400 text-xs">{description}</p>
+                    <p className="text-white opacity-80 text-xs">{description}</p>
                     <div className="flex flex-wrap gap-2 mt-2">
                         {tags.map((tag, index) => (
                             <Chip key={index} className="text-xs text-black" variant="solid" radius="full" size="lg" color={tagColors[index]}>

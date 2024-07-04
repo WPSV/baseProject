@@ -11,3 +11,11 @@ export interface CompanyResumeProps {
     tags: string[];
     canEdit: boolean;
 }
+
+export interface GrowthPlanData {
+    image: string;
+    title: string;
+    description: string;
+    date: string;
+    tag: string;
+}

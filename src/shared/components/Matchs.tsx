@@ -5,7 +5,6 @@ import { Card, CardBody } from "@nextui-org/react";
 import Image from 'next/image';
 import { CardData } from '@/shared/types/homepage';
 
-
 interface MatchsProps {
     cardData?: CardData[];
 }
@@ -19,23 +18,23 @@ const getButtonClass = (label: string): string => {
         case 'Match bom':
             return 'bg-success text-black';
         default:
-            return 'bg-gray-500 text-black'; // Default class if the label doesn't match any option
+            return 'bg-gray-500 text-black';
     }
 };
 
 export default function Matchs({ cardData = [] }: MatchsProps): JSX.Element {
     return (
-        <Card radius="lg" className="relative w-full bg-dark flex flex-col">
+        <Card radius="lg" className="relative w-auto bg-dark flex flex-col">
             {cardData.length > 0 && (
                 <div className="flex justify-between p-5">
                     <div>
                         <h2 className="text-xl text-white font-bold">Seus matchs</h2>
                         <p className="text-sm text-white">{cardData.length} matchs encontrados</p>
                     </div>
-                    <a href="#" className="text-right text-white">Mostrar tudo</a>
+                    <a className="text-right text-white">Mostrar tudo</a>
                 </div>
             )}
-            <CardBody className="text-left p-4 text-white flex-grow">
+            <CardBody className={`text-left p-4 text-white flex-grow ${cardData.length === 0 ? 'min-h-[168px]' : ''}`}>
                 {cardData.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {cardData.map((item: CardData, index: number) => (
@@ -64,11 +63,11 @@ export default function Matchs({ cardData = [] }: MatchsProps): JSX.Element {
                     </div>
                 ) : (
                     <>
-                        <div className="flex justify-between items-center">
+                        <div className="flex w-full justify-between items-center">
                             <div>
-                                <p className="text-default-500 text-xs">Calculando os possíveis matchs e oportunidades.</p>
+                                <p className="text-white opacity-80 text-xs">Calculando os possíveis matchs e oportunidades.</p>
                             </div>
-                            <a href="#" className="text-right text-white">Mostrar tudo</a>
+                            <a className="text-right text-sm cursor-pointer text-white">Mostrar tudo</a>
                         </div>
                         <div className="mt-auto h-2 bg-white rounded-full animate-pulse"></div>
                     </>
