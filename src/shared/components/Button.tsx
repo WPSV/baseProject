@@ -1,33 +1,52 @@
-import { ReactNode } from 'react'
-import { Button as NextBtn } from '@nextui-org/button'
+import React from "react";
+import { Button as NextUIButton } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
-type ButtonProps = {
-  width?: string
-  height?: string
-  color?: string
-  fontSize?: string
-  fontWeight?: string
-  backgroundColor?: string
-  border?: string
-  borderRadius?: string
-  children: ReactNode
+type TButtonProps = {
+  children: React.ReactNode;
+  href?: string,
+  isDisabled?: boolean,
+  isLoading?: boolean,
+  spinner?: React.ReactNode,
+  startContent?: React.ReactNode,
+  endContent?: React.ReactNode,
+  isIconOnly?: boolean,
+  className: string,
 }
 
-export default function Button({
-  width,
-  height,
-  color,
-  fontSize,
-  backgroundColor,
-  border,
-  borderRadius,
-  children,
-}: ButtonProps) {
+export default function Input({children, href, isDisabled, isLoading, spinner, startContent, endContent, isIconOnly, className}: TButtonProps) {
+  const defaultClassNames = "h-14 bg-primary border border-solid border-primary rounded-lg text-light text-sm font-bold";
+  
+  const combinedClassNames = `${defaultClassNames} ${className} ${isDisabled && "cursor-not-allowed"}`.trim();
+  
+  if (href) return (
+    <Link href={href}>
+      <NextUIButton
+        disabled={isDisabled}
+        isLoading={isLoading}
+        spinner={spinner}
+        startContent={startContent}
+        endContent={endContent}
+        isIconOnly={isIconOnly}
+        className={combinedClassNames}
+      >
+        {children}
+      </NextUIButton>
+    </Link>
+  )
+  
   return (
-    <NextBtn
-      className={`${width} ${height} ${color} ${fontSize} ${backgroundColor} ${border} ${borderRadius}`}
+    <NextUIButton
+      type="submit"
+      disabled={isDisabled}
+      isLoading={isLoading}
+      spinner={spinner}
+      startContent={startContent}
+      endContent={endContent}
+      isIconOnly={isIconOnly}
+      className={combinedClassNames}
     >
       {children}
-    </NextBtn>
+    </NextUIButton>
   )
 }
