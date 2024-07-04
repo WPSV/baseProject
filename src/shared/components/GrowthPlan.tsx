@@ -54,11 +54,13 @@ export default function GrowthPlan({ data }: GrowthPlanProps) {
                     const isFirstOfGroup = index === 0 || data[index - 1].date !== item.date;
                     return (
                         <div key={index} className="mb-8 flex items-center relative">
-                            {isFirstOfGroup && (
-                                <div className="flex flex-col items-center pr-2 w-24">
+                            <div className="flex flex-col items-center pr-2 w-24">
+                                {isFirstOfGroup ? (
                                     <p className="text-sm">{item.date}</p>
-                                </div>
-                            )}
+                                ) : (
+                                    <div className="text-sm">&nbsp;</div>
+                                )}
+                            </div>
                             {isFirstOfGroup && (
                                 <div className="absolute flex-shrink-0 ml-[6.5rem] w-4 h-4 bg-gray-400 rounded-full"></div>
                             )}
