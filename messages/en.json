@@ -1,4 +1,11 @@
 {
+    "Header": {
+        "contactUs": "Contact us",
+        "plan": "Plans",
+        "createAccount": "Create an account",
+        "login": "Login",
+        "darkMode": "Dark mode"
+    },
     "Login": {
         "title": "Welcome!",
         "subTitle": "It’s time to “Boost your inspiration” with GT Group.",

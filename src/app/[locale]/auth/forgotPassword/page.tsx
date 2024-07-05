@@ -41,7 +41,7 @@ export default function ForgotPassword() {
                             ],
                         }}
                     />
-                    <Button className="w-btn h-14 px-12 bg-buttonBg hover:bg-colorTp border border-transparent border-solid hover:border-colorTb rounded-lg text-buttonText text-sm font-bold ">
+                    <Button className="w-[142px] h-14 bg-buttonBg hover:bg-colorTp border border-transparent border-solid hover:border-colorTb rounded-lg text-buttonText text-sm font-bold">
                         {t('buttonText')}
                     </Button>
                 </div>

@@ -3,6 +3,7 @@ import { Textarea as NextUITextarea } from "@nextui-org/react";
 
 type TTextareaProps = {
   label?: string;
+  name?: string;
   placeholder?: string;
   labelPlacement?: "outside" | "outside-left" | "inside";
   minRows?: number;
@@ -25,7 +26,7 @@ type TTextareaProps = {
 }
 
 export default function Textarea({
-  label, placeholder, labelPlacement, minRows, maxRows, disableAutosize,
+  label, name, placeholder, labelPlacement, minRows, maxRows, disableAutosize,
   isDisabled, defaultValue, isReadOnly, isRequired, errorMessage, description, classNames
 }:TTextareaProps) {
   const mergeClassNames = (defaultClassNames: string[], classNames?: string[]) =>
@@ -52,6 +53,7 @@ export default function Textarea({
   return (
     <NextUITextarea
       label={label}
+      name={name}
       placeholder={placeholder}
       labelPlacement={labelPlacement}
       minRows={minRows}
