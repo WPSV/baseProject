@@ -8,7 +8,7 @@ export function RegisterSteps() {
   const [currentStep, setCurrentStep] = useState(4);
   
   return (
-    <div className="flex justify-center mb-10">
+    <div className="flex justify-center h-full max-h-[100px] my-10">
       {steps.map((step, index) => (
         <div className={`${styles.stepItem} ${currentStep >= (index + 1) ? styles.active : styles.inactive}`} key={index}>
           <p className="flex justify-center items-center rounded-full w-10 h-10 font-bold leading-[21.6px] text-lg mb-2.5">

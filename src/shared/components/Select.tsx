@@ -4,6 +4,7 @@ import { Select as NextUISelect, SelectItem } from "@nextui-org/react";
 type TSelectProps = {
   label?: string;
   "aria-label"?: string;
+  name?: string;
   labelPlacement?: "outside" | "outside-left" | "inside";
   placeholder?: string;
   selectionMode?: "single" | "multiple";
@@ -37,7 +38,7 @@ type TSelectProps = {
 }
 
 export default function Select({
-  label, "aria-label": ariaLabel, labelPlacement, placeholder, selectionMode, items, isRequired, isDisabled, disabledKeys, startContent,
+  label, "aria-label": ariaLabel, name, labelPlacement, placeholder, selectionMode, items, isRequired, isDisabled, disabledKeys, startContent,
   endContent, selectorIcon, disableSelectorIconRotation, description, errorMessage, onChange, selectedKeys, classNames
 }: TSelectProps) {
   const mergeClassNames = (defaultClassNames: string[], classNames?: string[]) =>
@@ -81,6 +82,7 @@ export default function Select({
     <NextUISelect
       label={label}
       aria-label={ariaLabel}
+      name={name}
       labelPlacement={labelPlacement}
       placeholder={placeholder}
       selectionMode={selectionMode}

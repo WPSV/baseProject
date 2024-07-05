@@ -2,8 +2,11 @@ import React from "react";
 import LanguageSwitcher from "@/shared/components/LanguageSwitcher";
 import styles from "@/styles/header.module.css";
 import { Switch } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 export default function App() {
+  const t = useTranslations("Header");
+  
   const [isOpen, setIsOpen] = React.useState(false);
   
   const handleToggle = () => {
@@ -34,13 +37,13 @@ export default function App() {
             <img src="/assets/logoHeader.svg" alt="logo"/>
           </div>
           <ul className="flex justify-between w-[400px]">
-            <li>Contate-nos</li>
-            <li>Planos</li>
-            <li>Criar conta</li>
-            <li>Login</li>
+            <li>{t("contactUs")}</li>
+            <li>{t("plan")}</li>
+            <li>{t("createAccount")}</li>
+            <li>{t("login")}</li>
           </ul>
           <div className="flex justify-between items-center">
-            <span className="mr-2.5">Modo escuro</span>
+            <span className="mr-2.5">{t("darkMode")}</span>
             <Switch className="mr-5" defaultSelected color="default"/>
             <LanguageSwitcher/>
           </div>

@@ -1,16 +1,17 @@
 import React from 'react'
-import styles from "../styles/authLogin.module.css";
 import { RegisterSteps } from "@/app/[locale]/auth/registerSteps";
 
 export default function AuthLayout({
-                                     children,
-                                   }: {
+  children,
+}: {
   children: React.ReactNode
 }) {
   return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center">
+    <div className="flex flex-1 items-center flex-col">
       <RegisterSteps />
-      {children}
+      <div className="flex-1 mb-10">
+        {children}
+      </div>
     </div>
   )
 }

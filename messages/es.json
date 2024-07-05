@@ -1,4 +1,11 @@
 {
+    "Header": {
+        "contactUs": "Contáctenos",
+        "plan": "Planes",
+        "createAccount": "Crea una cuenta",
+        "login": "Acceso",
+        "darkMode": "Modo oscuro"
+    },
     "Login": {
         "title": "¡Bienvenido!",
         "subTitle": "Es hora de “Impulsar tu inspiración” con GT Group.",

@@ -4,8 +4,7 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   important: true,
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/shared/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     './node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js',
@@ -29,6 +28,13 @@ const config: Config = {
       borderColor: {
         primary: '#E17900',
       },
+      screens: {
+        "max-h-640": { "raw": "(max-height: 640px)" },
+        "max-h-768": { "raw": "(max-height: 768px)" },
+        "max-h-1024": { "raw": "(max-height: 1024px)" },
+        "max-h-1280": { "raw": "(max-height: 1280px)" },
+        "max-h-1536": { "raw": "(max-height: 1536px)" },
+      }
     },
   },
   darkMode: "class",
