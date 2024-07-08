@@ -36,6 +36,23 @@
     "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
     "label": "Sua indústria"
   },
+  "YourBussiness": {
+    "title": "Onde você está procurando oportunidades?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Oportunidades em",
+    "description": "Por favor selecione a região de aplicação. Projeto são registrados no país de origem do negócio."
+  },
+  "Actuation": {
+    "title": "Em qual indústria sua companhia está atuando?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Sua indústria",
+    "description": "Você pode adicionar todas as industrias que possam ser relevantes para seu negócio."
+  },
+  "BussinessType": {
+    "title": "Em qual indústria sua companhia está atuando?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Sua indústria"
+  },
   "ForgotPassword": {
     "title": "Perdeu sua senha?",
     "subTitle": "Informe o e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.",
