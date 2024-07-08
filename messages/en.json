@@ -15,7 +15,9 @@
         "buttonText": "Log In",
         "googleButtonText": "Login with Google",
         "registerMessage": "Don't have an account?",
-        "linkRegister": "Register here!"
+        "linkRegister": "Register here!",
+        "wrongPassword": "Invalid password, try again",
+        "wrongEmail": "Invalid email, try again"
     },
     "ForgotPassword": {
         "title": "Lost your password?",

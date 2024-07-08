@@ -15,7 +15,9 @@
         "buttonText": "Acceso",
         "googleButtonText": "Iniciar sesión con Google",
         "registerMessage": "¿No tienes una cuenta?",
-        "linkRegister": "¡Registrar aquí!"
+        "linkRegister": "¡Registrar aquí!",
+        "wrongPassword": "Contraseña no válida, vuelva a intentarlo",
+        "wrongEmail": "E-mail no válido, vuelva a intentarlo"
     },
     "ForgotPassword": {
         "title": "¿Perdiste tu contraseña?",

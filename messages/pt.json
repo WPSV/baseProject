@@ -15,7 +15,9 @@
     "buttonText": "Entrar",
     "googleButtonText": "Login com o Google",
     "registerMessage": "Não possui uma conta?",
-    "linkRegister": "Realize seu cadastro aqui!"
+    "linkRegister": "Realize seu cadastro aqui!",
+    "wrongPassword": "Senha inválida, tente novamente",
+    "wrongEmail": "E-mail inválido, tente novamente"
   },
   "YourBussiness": {
     "title": "Onde você está procurando oportunidades?",
