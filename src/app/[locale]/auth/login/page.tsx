@@ -75,7 +75,7 @@ export default function Login() {
           Ou
         </p>
         <Button
-          className="w-full h-12 border bg-background hover:bg-googleButtonHover border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-googleButtonColor hover:text-googleButtonTextHover py-2.5">
+          className="w-full h-12 bg-background hover:bg-googleButtonHover border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-googleButtonColor hover:text-googleButtonTextHover py-2.5">
           <img className="m-0" src="/assets/googleIcon.svg" alt="Google"/>
           {t('googleButtonText')}
         </Button>
