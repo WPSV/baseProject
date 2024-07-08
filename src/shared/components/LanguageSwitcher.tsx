@@ -1,3 +1,5 @@
+'use client'
+
 import { ChangeEvent, useTransition } from "react";
 import {useRouter, usePathname} from "@/navigation";
 import { useParams } from "next/navigation";
