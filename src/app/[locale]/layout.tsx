@@ -1,10 +1,11 @@
 import React from "react";
 import '@/styles/globals.css';
 import type { Metadata } from 'next'
-import {NextUIProvider} from "@nextui-org/system";
 
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
+import Provider from "./providers";
+import SwitchMode from "./switchMode";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -24,9 +25,10 @@ export default async function LocaleLayout({
         <html lang={locale}>
             <body>
                 <NextIntlClientProvider messages={messages}>
-                    <NextUIProvider>
+                    <Provider>
+                        <SwitchMode />
                         {children}
-                    </NextUIProvider>
+                    </Provider>
                 </NextIntlClientProvider>
             </body>
         </html>

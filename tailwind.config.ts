@@ -1,7 +1,8 @@
-import { nextui } from '@nextui-org/theme'
-import type { Config } from 'tailwindcss'
+// tailwind.config.js
+const {nextui} = require("@nextui-org/react");
 
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   important: true,
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,28 +11,42 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     './node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js',
   ],
-  theme: {
-    extend: {
-      colors: {
-        primary: '#E17900',
-        lightPrimary: '#FF971E',
-        dark: '#1A2F43',
-        darkPlus: '#0A131C',
-        darkMinus: '#284057',
-        light: '#FFFFFF',
-        lightPlus: '#E8EAEB',
-        lightMinus: '#EFF4F2',
-        error: '#E41A1A',
-        success: '#47cb18',
-        outline: '#C9CBCC',
-        input: '#33526F',
+  plugins: [
+    nextui({
+      themes: {
+        "dark": {
+          extend: "dark",
+          colors: {
+            background: "#0A131C",
+            colorTitle: "#FFF",
+            colorBgField: "#284057",
+            buttonColor: "#E17900",
+            buttonText: "#FFF",
+            primary: "#E17900",
+            subtTitle: "#E8EAEB",
+            error: "#E41A1A",
+            success: "#47cb18",
+            outline: "#C9CBCC",
+            input: "#33526F", 
+          },
+        },
+        "light": {
+          extend: "light",
+          colors: {
+            background: "#FFF",
+            colorTitle: "#0A131C",
+            colorBgField: "#FFF",
+            buttonColor: "#E17900",
+            buttonText: "#FFF",
+            primary: "#E17900",
+            subtTitle: "#33526F",
+            error: "#E41A1A",
+            success: "#47cb18",
+            outline: "#C9CBCC",
+            input: "#33526F",    
+          },
+        },
       },
-      borderColor: {
-        primary: '#E17900',
-      },
-    },
-  },
-  darkMode: "class",
-  plugins: [nextui()],
-}
-export default config
+    }),
+  ],
+};
