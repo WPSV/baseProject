@@ -5,7 +5,6 @@ import type { Metadata } from 'next'
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Provider from "./providers";
-import SwitchMode from "./switchMode";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -26,7 +25,6 @@ export default async function LocaleLayout({
             <body>
                 <NextIntlClientProvider messages={messages}>
                     <Provider>
-                        <SwitchMode />
                         {children}
                     </Provider>
                 </NextIntlClientProvider>

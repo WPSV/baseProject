@@ -5,6 +5,7 @@ import LanguageSwitcher from "@/shared/components/LanguageSwitcher";
 import styles from "@/styles/header.module.css";
 import { Switch } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
+import SwitchMode from "@/app/[locale]/switchMode";
 
 export default function App() {
   const t = useTranslations("Header");
@@ -46,7 +47,9 @@ export default function App() {
           </ul>
           <div className="flex justify-between items-center">
             <span className="mr-2.5">{t("darkMode")}</span>
-            <Switch className="mr-5" defaultSelected color="default"/>
+            <div className="mr-5">
+            <SwitchMode/>
+            </div>
             <LanguageSwitcher/>
           </div>
         </nav>
