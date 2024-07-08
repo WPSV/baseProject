@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import LanguageSwitcher from "@/shared/components/LanguageSwitcher";
 import styles from "@/styles/header.module.css";
