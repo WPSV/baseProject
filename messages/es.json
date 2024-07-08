@@ -1,4 +1,11 @@
 {
+    "Header": {
+        "contactUs": "Contáctenos",
+        "plan": "Planes",
+        "createAccount": "Crea una cuenta",
+        "login": "Acceso",
+        "darkMode": "Modo oscuro"
+    },
     "Login": {
         "title": "¡Bienvenido!",
         "subTitle": "Es hora de “Impulsar tu inspiración” con GT Group.",
@@ -8,7 +15,9 @@
         "buttonText": "Acceso",
         "googleButtonText": "Iniciar sesión con Google",
         "registerMessage": "¿No tienes una cuenta?",
-        "linkRegister": "¡Registrar aquí!"
+        "linkRegister": "¡Registrar aquí!",
+        "wrongPassword": "Contraseña no válida, vuelva a intentarlo",
+        "wrongEmail": "E-mail no válido, vuelva a intentarlo"
     },
     "ForgotPassword": {
         "title": "¿Perdiste tu contraseña?",

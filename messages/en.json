@@ -1,4 +1,11 @@
 {
+    "Header": {
+        "contactUs": "Contact us",
+        "plan": "Plans",
+        "createAccount": "Create an account",
+        "login": "Login",
+        "darkMode": "Dark mode"
+    },
     "Login": {
         "title": "Welcome!",
         "subTitle": "It’s time to “Boost your inspiration” with GT Group.",
@@ -8,7 +15,9 @@
         "buttonText": "Log In",
         "googleButtonText": "Login with Google",
         "registerMessage": "Don't have an account?",
-        "linkRegister": "Register here!"
+        "linkRegister": "Register here!",
+        "wrongPassword": "Invalid password, try again",
+        "wrongEmail": "Invalid email, try again"
     },
     "ForgotPassword": {
         "title": "Lost your password?",

@@ -1,0 +1,9 @@
+.lineUp {
+  transform: translate(4px, 3px) !important;
+  rotate: 45deg;
+}
+
+.lineDown {
+  transform: translate(4px, -3px) !important;
+  rotate: 315deg;
+}

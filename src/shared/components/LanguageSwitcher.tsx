@@ -1,39 +1,37 @@
-import { useTranslation } from 'next-i18next';
-import {Globe} from "@phosphor-icons/react";
-import {Dropdown, DropdownItem, DropdownMenu, DropdownTrigger} from "@nextui-org/react";
+'use client'
+
+import { ChangeEvent, useTransition } from "react";
+import {useRouter, usePathname} from "@/navigation";
+import { useParams } from "next/navigation";
+import {locales} from "@/config";
+import { useLocale } from "next-intl";
 
 const LanguageSwitcher = () => {
-    const { i18n } = useTranslation();
+    const router = useRouter();
+    const [isPending, startTransition] = useTransition();
+    const pathname = usePathname();
+    const params = useParams();
+    const locale = useLocale();
 
-    const handleChange = (key: string) => {
-        console.log(key);
-        i18n.changeLanguage(key);
+    const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+      const nextLocale = event.target.value;
+      startTransition(() => {
+        router.replace(
+          // @ts-ignore
+          {pathname, params},
+          {locale: nextLocale},
+        );
+      });
     }
 
     return (
-        <Dropdown
-            placement="bottom-end"
-            showArrow
-            classNames={{
-                base: [
-                    "before:bg-primary bg-transparent"
-                ],
-                content: [
-                    "border border-solid border-primary rounded"
-                ]
-            }}
-        >
-            <DropdownTrigger>
-                <Globe size={32} weight="bold" color="#FFF" />
-            </DropdownTrigger>
-            <DropdownMenu
-                onAction={(key) => handleChange(key.toString())}
-            >
-                <DropdownItem className="text-center" key="en">English</DropdownItem>
-                <DropdownItem className="text-center" key="pt">Português</DropdownItem>
-                <DropdownItem className="text-center" key="es">Español</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
+      <select onChange={handleSelectChange} disabled={isPending} defaultValue={locale}>
+        {locales.map((cur) => (
+          <option key={cur} value={cur}>
+            {cur.toUpperCase()}
+          </option>
+        ))}
+      </select>
     );
 };
 

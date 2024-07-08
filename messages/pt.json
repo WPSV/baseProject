@@ -1,18 +1,61 @@
 {
+  "Header": {
+    "contactUs": "Contate-nos",
+    "plan": "Planos",
+    "createAccount": "Criar conta",
+    "login": "Login",
+    "darkMode": "Modo escuro"
+  },
   "Login": {
     "title": "Bem-vindo!",
-    "subTitle": "Está na hora de “Boost your inspiration” com a GT Group.",
+    "subTitle": "Está na hora de “Impulsionar sua aspiração” com a GT Group.",
     "inputEmail": "Seu e-mail",
     "inputPassword": "Sua senha",
     "linkForgotPassword": "Esqueci minha senha",
     "buttonText": "Entrar",
     "googleButtonText": "Login com o Google",
     "registerMessage": "Não possui uma conta?",
-    "linkRegister": "Realize seu cadastro aqui!"
+    "linkRegister": "Realize seu cadastro aqui!",
+    "wrongPassword": "Senha inválida, tente novamente",
+    "wrongEmail": "E-mail inválido, tente novamente"
+  },
+  "YourBussiness": {
+    "title": "Onde você está procurando oportunidades?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Oportunidades em",
+    "description": "Por favor selecione a região de aplicação. Projeto são registrados no país de origem do negócio."
+  },
+  "Actuation": {
+    "title": "Em qual indústria sua companhia está atuando?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Sua indústria",
+    "description": "Você pode adicionar todas as industrias que possam ser relevantes para seu negócio."
+  },
+  "BussinessType": {
+    "title": "Em qual indústria sua companhia está atuando?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Sua indústria"
+  },
+  "YourBussiness": {
+    "title": "Onde você está procurando oportunidades?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Oportunidades em",
+    "description": "Por favor selecione a região de aplicação. Projeto são registrados no país de origem do negócio."
+  },
+  "Actuation": {
+    "title": "Em qual indústria sua companhia está atuando?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Sua indústria",
+    "description": "Você pode adicionar todas as industrias que possam ser relevantes para seu negócio."
+  },
+  "BussinessType": {
+    "title": "Em qual indústria sua companhia está atuando?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
+    "label": "Sua indústria"
   },
   "ForgotPassword": {
     "title": "Perdeu sua senha?",
-    "subTitle": "Informe o s-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.",
+    "subTitle": "Informe o e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.",
     "inputEmail": "Seu email",
     "buttonText": "Enviar"
   },
