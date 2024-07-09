@@ -65,7 +65,7 @@ export default function DashboardLayoutHistoric({ children }: { children: React.
     ];
 
     return (
-        <div className="relative flex w-screen min-h-screen bg-darkPlus">
+        <div className="relative flex w-screen min-h-screen bg-background">
             <Sidebar />
             <div className="flex flex-col md:flex-row flex-grow">
                 <div className="w-2/4 p-4 space-y-4">

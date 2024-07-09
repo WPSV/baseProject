@@ -21,7 +21,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const progressValue: number = 75;
 
     return (
-        <div className="relative flex w-screen h-screen bg-darkPlus">
+        <div className="relative flex w-screen h-screen bg-background">
             <Sidebar />
             <div className="flex flex-col md:flex-row flex-grow p-4 overflow-auto">
                 <div className="w-full md:w-2/3  space-y-4">

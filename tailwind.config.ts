@@ -34,6 +34,8 @@ module.exports = {
             success: "#47cb18",
             outline: "#C9CBCC",
             input: "#33526F",
+            secondary:"#1A2F43",
+            secondaryminus: "#33526F"
           },
             borderColor: {
                 primary: '#E17900',
@@ -67,6 +69,8 @@ module.exports = {
             success: "#47cb18",
             outline: "#C9CBCC",
             input: "#FFF",
+            secondary:"#E8EAEB",
+            secondaryminus: "#EFF4F2"
           },
             borderColor: {
                 primary: '#E17900',

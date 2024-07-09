@@ -9,8 +9,8 @@ interface MainMessageProps {
 
 export default function MainMessage({ message }: MainMessageProps) {
     return (
-        <Card radius="lg" className="h-14 bg-dark flex items-center justify-center">
-            <CardBody className="text-left p-4 text-white">
+        <Card radius="lg" className="h-14 bg-secondary flex items-center justify-center">
+            <CardBody className="text-left p-4 text-colorTitle">
                 {message}
             </CardBody>
         </Card>
