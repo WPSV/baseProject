@@ -8,6 +8,7 @@ import logotipoPequeno from '@/public/assets/logotipoPequeno.svg';
 import companyPlaceholder from '@/public/assets/companyPlaceholder.svg';
 import { ThemeSwitcher } from "@/shared/components/ThemeSwitcher";
 
+
 const animationsConfig = {
     transitionDuration: 'duration-500',
     animation: 'transition-opacity',
