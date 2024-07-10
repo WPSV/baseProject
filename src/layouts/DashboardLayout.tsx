@@ -15,16 +15,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const company: string = "Companhia um";
     const description: string = "Aqui é a descrição de sua companhia";
     const tags: string[] = ["Startup", "Publicidade", "UE", "Portugal", "Marketing", "Investimento", "Taxas Isentas"];
-    const cardList: CardData[] = [
-    ];
+    const cardList: CardData[] = [];
 
     const progressValue: number = 75;
 
     return (
         <div className="relative flex w-screen h-screen bg-background">
             <Sidebar />
-            <div className="flex flex-col md:flex-row flex-grow p-4 overflow-auto">
-                <div className="w-full md:w-2/3  space-y-4">
+            <div className="flex gap-9 flex-col md:flex-row flex-grow">
+                <div className="w-full md:w-2/3 space-y-6 p-4">
                     <PageLocation />
                     <MainMessage message={message} />
                     <CompanyResume company={company} description={description} tags={tags} canEdit={true} />
@@ -39,9 +38,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     <GrowthPlan />
                     <CallUs />
                 </div>
-                <div className="w-full md:w-1/3 p-4 space-y-4 mt-4 md:mt-0">
-                    {children}
-                </div>
+
             </div>
         </div>
     );
