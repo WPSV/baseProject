@@ -1,3 +1,5 @@
+'use client'
+
 import { createElement, ElementType, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { CaretDown, CaretUp, CaretLeft, CaretRight, House, Note, Factory, Lightbulb, SignOut, Gear } from '@phosphor-icons/react';
