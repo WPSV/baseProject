@@ -1,5 +1,4 @@
 import {useTranslations} from 'next-intl';
-import Sidebar from '@/shared/components/Sidebar';
 import ConfigurationLayout from '@/layouts/ConfigurationLayout';
 
 export default function Configuration() {
@@ -7,6 +6,8 @@ export default function Configuration() {
     const p = useTranslations('BackPage');
     
     return (
-        <ConfigurationLayout />
+        <ConfigurationLayout>
+            
+        </ConfigurationLayout>
     );
 }
