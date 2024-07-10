@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '@/shared/components/Sidebar';
 import PageLocation from '@/shared/components/pagelocation';
 import CardConfiguration from '@/shared/components/CardConfiguration';
+import CardPlane from '@/shared/components/CardPlane';
 
 export default function ConfigurationLayout() {
   return (
@@ -12,7 +13,9 @@ export default function ConfigurationLayout() {
           <PageLocation />
           <div className="grid grid-cols-3 grid-rows-1 gap-4 mt-5">
             <CardConfiguration />
-            <div className="col-span-2">2</div>
+            <div className="col-span-2">
+              <CardPlane />
+            </div>
           </div>
         </div>
       </div>
