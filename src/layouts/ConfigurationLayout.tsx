@@ -3,6 +3,9 @@ import Sidebar from '@/shared/components/Sidebar';
 import PageLocation from '@/shared/components/pagelocation';
 import CardConfiguration from '@/shared/components/CardConfiguration';
 import CardProfile from '@/shared/components/CardProfile';
+import CardNotificationEmail from '@/shared/components/CardNotificationEmail';
+import CardTime from '@/shared/components/CardTime';
+import CardPlane from '@/shared/components/CardPlane';
 
 export default function ConfigurationLayout() {
   return (
