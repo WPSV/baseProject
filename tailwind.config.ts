@@ -19,9 +19,11 @@ module.exports = {
           extend: "dark",
           colors: {
             background: "#0A131C",
+            colorCard: "#1A2F43",
             colorTitle: "#FFF",
-            subtTitle: "#E8EAEB",
-            colorBgField: "#284057",
+            subtTitle: "#284057",
+            borderInput: "#284057",
+            borderInputFocus: "#47cb18",
             buttonColor: "#E17900",
             buttonText: "#FFF",
             buttonBg: "#E17900",
@@ -60,8 +62,10 @@ module.exports = {
         "light": {
           extend: "light",
           colors: {
-            background: "#FFF",
+            background: "#E8EAEB",
+            colorCard: "#FFF",
             colorTitle: "#0A131C",
+            borderInput: "#EFF4F2",
             subtTitle: "#33526F",
             colorBgField: "#FFF",
             buttonColor: "#E17900",
