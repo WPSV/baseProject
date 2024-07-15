@@ -9,7 +9,7 @@ type TButtonSectionProps ={
 export default function ButtonsSection({ prevLink, nextLink, justifyContent } : TButtonSectionProps) {
   return (
     <div className={`flex ${justifyContent ? justifyContent : "justify-around"} items-center mt-[30px]`}>
-      <Button href={prevLink} className="w-[172px] bg-light hover:bg-[#EDEFF0] text-dark border-none">
+      <Button href={prevLink} className="w-[172px] bg-light hover:bg-[#EDEFF0] data-[hover]:opacity-1 text-dark border-none">
         Voltar
       </Button>
       <Button href={nextLink} className="w-[172px]">

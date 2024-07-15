@@ -4,14 +4,7 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/:locale/oportunidades",
-        destination: '/:locale/auth/register/opportunities',
-      }
-    ]
-  }
+  reactStrictMode: false,
 };
 
 export default withNextIntl(nextConfig);

@@ -14,7 +14,8 @@
     "@nextui-org/system": "^2.2.2",
     "@nextui-org/theme": "^2.2.6",
     "@phosphor-icons/react": "^2.1.5",
-    "framer-motion": "^11.2.14",
+    "@reduxjs/toolkit": "^2.2.6",
+    "framer-motion": "^11.2.11",
     "i18next": "^23.11.5",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-chained-backend": "^4.6.2",
@@ -29,6 +30,7 @@
     "react-dom": "^18.3.1",
     "react-google-recaptcha": "^3.1.0",
     "react-i18next": "^14.1.2",
+    "react-redux": "^9.1.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { Textarea as NextUITextarea } from "@nextui-org/react";
 
 type TTextareaProps = {
@@ -15,6 +15,7 @@ type TTextareaProps = {
   isRequired?: boolean;
   errorMessage?: React.ReactNode;
   description?: React.ReactNode;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   classNames?: {
     base?: string[];
     label?: string[];
@@ -26,8 +27,8 @@ type TTextareaProps = {
 }
 
 export default function Textarea({
-  label, name, placeholder, labelPlacement, minRows, maxRows, disableAutosize,
-  isDisabled, defaultValue, isReadOnly, isRequired, errorMessage, description, classNames
+  label, name, placeholder, labelPlacement, minRows, maxRows, disableAutosize, isDisabled,
+  defaultValue, isReadOnly, isRequired, errorMessage, description, onChange, classNames
 }:TTextareaProps) {
   const mergeClassNames = (defaultClassNames: string[], classNames?: string[]) =>
     classNames ? [...defaultClassNames, classNames] : defaultClassNames;
@@ -65,6 +66,7 @@ export default function Textarea({
       required={isRequired}
       errorMessage={errorMessage}
       description={description}
+      onChange={onChange}
       classNames={combinedClassNames}
     />
   )

@@ -45,10 +45,10 @@ export default function Select({
     classNames ? [...defaultClassNames, classNames] : defaultClassNames;
   
   const defaultClassNames = {
-    base: ["mb-[38px]"],
-    label: ["pb-[5px]"],
-    mainWrapper: ["bg-light border border-solid border-outline rounded"],
-    trigger: ["data-[hover]:bg-light group-data-[focus]:bg-light bg-light h-14"],
+    base: ["mb-5"],
+    label: ["pb-[6px]"],
+    mainWrapper: ["bg-light border border-solid border-outline rounded h-[56px]"],
+    trigger: ["rounded-[3px] data-[hover]:bg-light group-data-[focus]:bg-light bg-light h-14"],
     innerWrapper: [],
     selectorIcon: [],
     value: [],

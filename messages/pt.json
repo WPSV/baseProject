@@ -38,20 +38,45 @@
   },
   "YourBussiness": {
     "title": "Onde você está procurando oportunidades?",
+    "companyName": "Nome da companhia",
+    "localization": "Localização",
+    "url": "URL do negócio",
+    "descriptionBussiness": "O que você faz?",
+    "description": "Insira um breve brief descrevendo as atividades e missões realizadas por seu negócio.",
+    "agreement": "Concordo com os",
+    "useTerms": "termos de uso"
+  },
+  "Opportunities": {
+    "title": "Onde você está procurando oportunidades?",
     "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
     "label": "Oportunidades em",
+    "options": "Escolha as opções",
     "description": "Por favor selecione a região de aplicação. Projeto são registrados no país de origem do negócio."
   },
   "Actuation": {
     "title": "Em qual indústria sua companhia está atuando?",
     "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
     "label": "Sua indústria",
+    "options": "Escolha as opções",
     "description": "Você pode adicionar todas as industrias que possam ser relevantes para seu negócio."
   },
   "BussinessType": {
     "title": "Em qual indústria sua companhia está atuando?",
     "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
-    "label": "Sua indústria"
+    "label": "Sua indústria",
+    "options": "Escolha as opções"
+  },
+  "Preferences": {
+    "title": "Quais oportunidades vocês está buscando?",
+    "subTitle": "Selecione todas que fazem parte do seu ciclo de interesse."
+  },
+  "Expectations": {
+    "title": "Quais são as principais expectativas para o próximo ano?",
+    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita."
+  },
+  "Success": {
+    "title": "Sucesso, seja bem-vindo!",
+    "subTitle": "Explore as oportunidades personalizadas para seu negócios e de um boost no seu ano."
   },
   "ForgotPassword": {
     "title": "Perdeu sua senha?",

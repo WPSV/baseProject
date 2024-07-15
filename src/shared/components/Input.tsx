@@ -42,7 +42,7 @@ export default function Input({
   
   const defaultClassNames = {
     base: [],
-    label: [],
+    label: ["pb-[5px]"],
     mainWrapper: [],
     inputWrapper: [`bg-colorBgField border border-solid border-outline rounded h-14 text-colorTitle ${!description && "mb-5"} `],
     innerWrapper: [],

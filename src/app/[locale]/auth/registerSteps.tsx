@@ -1,11 +1,12 @@
 'use client'
 
 import styles from "@/styles/registerSteps.module.css";
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 export function RegisterSteps() {
   const steps: string[] = ["Seu negócio", "Oportunidades", "Atuação", "Tipo de negócio", "Preferências", "Expectativas", "Sucesso!"];
-  const [currentStep, setCurrentStep] = useState(4);
+  const currentStep = useSelector((state: RootState) => state.registerSteps.currentStep);
   
   return (
     <div className="flex justify-center h-full max-h-[100px] my-10">

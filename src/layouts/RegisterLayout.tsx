@@ -9,9 +9,7 @@ export default function AuthLayout({
   return (
     <div className="flex flex-1 items-center flex-col">
       <RegisterSteps />
-      <div className="flex-1 mb-10">
-        {children}
-      </div>
+      {children}
     </div>
   )
 }

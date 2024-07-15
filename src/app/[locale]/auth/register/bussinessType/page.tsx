@@ -1,40 +1,45 @@
 'use client'
 
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import AuthLayout from "@/layouts/AuthLayout";
 import RegisterLayout from "@/layouts/RegisterLayout";
 import Title from "@/shared/components/Title";
 import SubTitle from "@/shared/components/SubTitle";
 import Select from "@/shared/components/Select";
-import Description from "@/shared/components/Description";
 import ButtonsSection from "@/shared/components/ButtonsSection";
 import { useTranslations } from "next-intl";
+import RegisterContainer from "@/shared/components/RegisterContainer";
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrentStep } from "@/store/slices/registerStepsSlice";
+import { RootState } from "@/store/store";
+import { removeValue, updateField } from "@/store/slices/registerFormsSlice";
 
 export default function Page() {
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(setCurrentStep(4));
+  }, [dispatch]);
+  
   const t = useTranslations("BussinessType");
   
-  const [itemsSelected, setItemsSelected] = useState<string[]>([]);
   const itemsSelect = ["Startup", "Grande empresa", "Média empresa", "Pequena empresa"];
   
+  const name = "businessType";
+  const itemsSelected = useSelector((state: RootState) => state.registerForms[name]);
+  
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    const items = event.target.value.split(",");
-    
-    if (items[0] === "") {
-      setItemsSelected([]);
-    } else {
-      setItemsSelected(items);
-    }
+    dispatch(updateField({ name: name, value: event.target.value }));
   }
   
   const handleRemove = (itemToRemove: string) => {
-    const updateItemsSelected = itemsSelected?.filter(item => item !== itemToRemove);
-    setItemsSelected(updateItemsSelected);
+    dispatch(removeValue({ name: name, value: itemToRemove }));
   }
   
   return (
     <AuthLayout>
       <RegisterLayout>
-        <div className="text-center w-[616px] h-full bg-light rounded-[24px] p-[40px_calc((534px-406px)/2)]">
+        <RegisterContainer className="w-[616px]">
           <Title>
             {t("title")}
           </Title>
@@ -57,7 +62,7 @@ export default function Page() {
           </div>
           <Select
             aria-label="Escolha as opções"
-            placeholder="Escolha as opções"
+            placeholder={t("options")}
             selectionMode="multiple"
             items={itemsSelect}
             isRequired
@@ -67,8 +72,8 @@ export default function Page() {
               base: ["mb-[10px]"]
             }}
           />
-          <ButtonsSection prevLink="/auth/register/actuation" nextLink="/" justifyContent="justify-around"/>
-        </div>
+          <ButtonsSection prevLink="/auth/register/actuation" nextLink="/auth/register/preferences" justifyContent="justify-around"/>
+        </RegisterContainer>
       </RegisterLayout>
     </AuthLayout>
   )
