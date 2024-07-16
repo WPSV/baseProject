@@ -109,7 +109,7 @@ const Sidebar = () => {
             <aside
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className={`${sidebarOpen ? 'w-64' : 'w-16'} ${animationsConfig.transitionDuration} bg-secondary text-colorTitle flex flex-col justify-between fixed h-screen`}
+                className={`${sidebarOpen ? 'w-64' : 'w-16'} ${animationsConfig.transitionDuration} bg-card text-colorTitle flex flex-col justify-between fixed h-screen`}
             >
                 <div className="flex flex-col h-full">
                     <div className="p-4 flex items-center justify-center h-20">
@@ -318,13 +318,13 @@ const Sidebar = () => {
                             <div className="relative mb-4">
                                 <button
                                     onClick={toggleLanguageDropdown}
-                                    className={`appearance-none bg-secondary text-colorTitle p-2 rounded w-full flex justify-between items-center focus:outline-none focus:ring-0 focus:border-none ${textStyles.menuItem.fontSize} ${textStyles.menuItem.lineHeight} ${textStyles.menuItem.letterSpacing}`}
+                                    className={`appearance-none bg-transparent text-colorTitle p-2 rounded w-full flex justify-between items-center focus:outline-none focus:ring-0 focus:border-none ${textStyles.menuItem.fontSize} ${textStyles.menuItem.lineHeight} ${textStyles.menuItem.letterSpacing}`}
                                 >
                                     <span>{language.toUpperCase()}</span>
                                     <CaretDown size={24} className="text-colorTitle"/>
                                 </button>
                                 <div
-                                    className={`absolute top-full left-0 w-full bg-secondary opacity-95 text-colorTitle rounded mt-2 transition-all duration-300 ${languageOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}
+                                    className={`absolute top-full left-0 w-full bg-transparent opacity-95 text-colorTitle rounded mt-2 transition-all duration-300 ${languageOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}
                                     style={{overflow: 'hidden', zIndex: 10}}
                                 >
                                     <ul className="space-y-2 py-2 px-4">
