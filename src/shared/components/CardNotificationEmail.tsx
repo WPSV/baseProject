@@ -9,7 +9,7 @@ export default function CardNotificationEmail() {
 
   const handleToggle = () => setChecked(!checked);
   return (
-    <Card radius="lg" className="bg-colorCard flex items-center justify-center mb-5">
+    <Card radius="lg" className="bg-card flex items-center justify-center mb-5">
       <CardHeader className="flex gap-3 p-6">
         <div className="flex flex-col">
           <p className="text-md font-bold text-2xl mt-5 text-colorTitle">Email de nofiticação</p>
