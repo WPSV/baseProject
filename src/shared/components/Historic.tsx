@@ -34,7 +34,7 @@ const data = [
 
 export default function DataUpload() {
     return (
-        <div className="p-6 bg-colorBgField rounded-lg w-[300px]">
+        <div className="p-6 bg-card rounded-lg w-[300px]">
             <h1 className="text-xl font-bold text-colorTitle mb-6">Histórico</h1>
             {data.map((group, index) => (
                 <div key={index} className="mb-6">
