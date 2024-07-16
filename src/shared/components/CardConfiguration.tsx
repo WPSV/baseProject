@@ -6,7 +6,7 @@ import { UserCircle, Envelope, UsersThree, Database } from '@phosphor-icons/reac
 
 export default function CardConfiguration() {
   return (
-    <Card radius="lg" className="bg-colorCard flex items-center justify-center w-90 min-h-80 max-h-96">
+    <Card radius="lg" className="bg-card flex items-center justify-center w-90 min-h-80 max-h-96">
       <CardHeader className="flex gap-3 p-6">
         <div className="flex flex-col">
           <p className="text-md font-bold text-2xl mt-5">Configurações</p>
