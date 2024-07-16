@@ -79,7 +79,7 @@ export default function CompanyResume({ company: initialCompany, description, ta
     }, [isEditing]);
 
     return (
-        <Card className="h-40 rounded-2xl bg-secondary flex flex-row items-center p-4">
+        <Card className="h-40 rounded-2xl bg-card flex flex-row items-center p-4">
             <Image
                 width={112}
                 height={112}
