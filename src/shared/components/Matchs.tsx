@@ -24,7 +24,7 @@ const getButtonClass = (label: string): string => {
 
 export default function Matchs({ cardData = [] }: MatchsProps): JSX.Element {
     return (
-        <Card radius="lg" className="relative w-auto bg-secondary flex flex-col">
+        <Card radius="lg" className="relative w-auto bg-card flex flex-col">
             {cardData.length > 0 && (
                 <div className="flex justify-between p-5">
                     <div>
@@ -38,7 +38,7 @@ export default function Matchs({ cardData = [] }: MatchsProps): JSX.Element {
                 {cardData.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {cardData.map((item: CardData, index: number) => (
-                            <div key={index} className="flex h-full bg-colorBgField p-4 rounded-lg">
+                            <div key={index} className="flex h-full bg-cardHistory p-4 rounded-lg">
                                 <div className="flex-shrink-0 mr-4 flex items-center">
                                     <Image
                                         src={item.img}
