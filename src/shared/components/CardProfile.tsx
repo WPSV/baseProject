@@ -7,7 +7,7 @@ import companyPlaceholder from '@/public/assets/companyPlaceholder.svg';
 
 export default function CardProfile() {
   return (
-    <Card radius="lg" className="bg-colorCard flex items-center justify-center">
+    <Card radius="lg" className="bg-card flex items-center justify-center">
       <CardHeader className="flex gap-3 p-6">
         <div className="flex flex-col">
           <p className="text-md font-bold text-2xl mt-5">Perfil</p>
