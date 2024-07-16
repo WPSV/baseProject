@@ -6,7 +6,6 @@ import CompanyResume from "@/shared/components/CompanyResume";
 import Matchs from '@/shared/components/Matchs';
 import OnboardingPercentage from '@/shared/components/OnboardingPercentage';
 import { CardData } from '@/shared/types/homepage';
-import CompanyPlaceholder2 from "@/public/assets/companyplaceholder2.svg";
 import GrowthPlan from '@/shared/components/GrowthPlan';
 import CallUs from '@/shared/components/CallUs';
 
