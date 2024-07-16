@@ -6,7 +6,7 @@ import CardProfile from '@/shared/components/CardProfile';
 
 export default function ConfigurationLayout() {
   return (
-    <div className="relative flex w-screen h-screen bg-background">
+    <div className="relative flex w-screen h-screen bg-card">
       <Sidebar />
       <div className="flex-grow flex flex-col p-8">
         <div className="w-full flex flex-col gap-4 mt-10">
