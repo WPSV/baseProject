@@ -32,7 +32,7 @@ export default function App() {
       </button>
 
       <div
-        className={`flex justify-center items-center fixed h-[88px] inset-0 bg-background transform ${isOpen ? 'translate-y-0' : '-translate-y-[88px]'} transition-transform duration-200 ease-in-out z-40`}
+        className={`flex justify-center items-center fixed h-[88px] inset-0 bg-card transform ${isOpen ? 'translate-y-0' : '-translate-y-[88px]'} transition-transform duration-200 ease-in-out z-40`}
       >
         <nav className="flex justify-around items-center h-full w-[1366px]">
           <div>
