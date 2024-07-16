@@ -32,7 +32,7 @@ export default function Login() {
 
   return (
     <AuthLayout>
-      <div className="bg-background w-[534px] h-[736px] rounded-[24px] p-[40px_calc((534px-406px)/2)] text-center">
+      <div className="bg-card w-[534px] h-[736px] rounded-[24px] p-[40px_calc((534px-406px)/2)] text-center">
         <img className="mt-0 mx-auto mb-[50px]" src="/assets/logoForm.svg" alt="Logo"/>
         <Title>
           {t('title')}
@@ -75,7 +75,7 @@ export default function Login() {
           Ou
         </p>
         <Button
-          className="w-full h-12 bg-background hover:bg-googleButtonHover border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-googleButtonColor hover:text-googleButtonTextHover py-2.5">
+          className="w-full h-12 bg-card hover:bg-googleButtonHover border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-googleButtonColor hover:text-googleButtonTextHover py-2.5">
           <img className="m-0" src="/assets/googleIcon.svg" alt="Google"/>
           {t('googleButtonText')}
         </Button>
