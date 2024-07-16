@@ -19,9 +19,11 @@ module.exports = {
           extend: "dark",
           colors: {
             background: "#0A131C",
-            colorCard: "#1A2F43",
+            card: "#1A2F43",
+            cardHistory: "#284057",
+            cardUpload: "#E17900",
             colorTitle: "#FFF",
-            subtTitle: "#284057",
+            subtTitle: "#FFF",
             borderInput: "#284057",
             borderInputFocus: "#47cb18",
             buttonColor: "#E17900",
@@ -38,6 +40,8 @@ module.exports = {
             buttonConfigHover: "#E17900",
             buttonConfigText: "#FFF",
             buttonConfigTextHover: "#FFF",
+            buttonHomeCall: "#E17900",
+            buttonHomeCallText: "#FFF",
             colorTb: "#FFF",
             colorTp: "#284057",
             primary: "#E17900",
@@ -45,7 +49,6 @@ module.exports = {
             success: "#47cb18",
             outline: "#C9CBCC",
             input: "#33526F",
-            secondary:"#1A2F43",
             secondaryminus: "#33526F"
           },
             borderColor: {
@@ -63,7 +66,9 @@ module.exports = {
           extend: "light",
           colors: {
             background: "#E8EAEB",
-            colorCard: "#FFF",
+            card: "#FFF",
+            cardHistory: "#EFF4F2",
+            cardUpload: "#0A131C",
             colorTitle: "#0A131C",
             borderInput: "#EFF4F2",
             subtTitle: "#33526F",
@@ -82,6 +87,8 @@ module.exports = {
             buttonConfigHover: "#E17900",
             buttonConfigText: "#0A131C",
             buttonConfigTextHover: "#FFF",
+            buttonHomeCall: "#0A131C",
+            buttonHomeCallText: "#E17900",
             colorTb: "#284057",
             colorTp: "#284057",
             primary: "#E17900",
@@ -89,7 +96,6 @@ module.exports = {
             success: "#47cb18",
             outline: "#C9CBCC",
             input: "#FFF",
-            secondary:"#E8EAEB",
             secondaryminus: "#EFF4F2"
           },
             borderColor: {
