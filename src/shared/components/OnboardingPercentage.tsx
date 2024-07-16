@@ -13,7 +13,7 @@ export default function OnboardingPercentage({ progressValue }: OnboardingPercen
     }
 
     return (
-        <div className="flex flex-col h-full p-4 bg-secondary text-colorTitle rounded-lg">
+        <div className="flex flex-col h-full p-4 bg-card text-colorTitle rounded-lg">
             <h2 className="text-xl font-bold">Onboarding</h2>
             <p className="text-xs opacity-80 mt-2">Adicione mais informações para matchs</p>
             <Progress
