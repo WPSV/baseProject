@@ -1,6 +1,6 @@
 "use client";
 
-import { Switch } from '@nextui-org/react'
+import { Switch } from "@nextui-org/react";
 import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -12,16 +12,20 @@ const SwitchMode = () => {
     setMounted(true)
   }, [])
 
-  if(!mounted) return null
+  if(!mounted) return null;
+  
+  const handleChange = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
   
   return(
     <div>
       <Switch 
-      isSelected={theme === 'dark'}
-      onValueChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        isSelected={theme === 'dark'}
+        onValueChange={handleChange}
       />
     </div>
-  )
+  );
 }
 
 export default SwitchMode

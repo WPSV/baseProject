@@ -32,7 +32,7 @@ export default function Login() {
 
   return (
     <AuthLayout>
-      <div className="bg-card w-[534px] h-[736px] rounded-[24px] p-[40px_calc((534px-406px)/2)] text-center">
+      <div className="bg-card dark:bg-[#ff0000] w-[534px] h-[736px] rounded-[24px] p-[40px_calc((534px-406px)/2)] text-center">
         <img className="mt-0 mx-auto mb-[50px]" src="/assets/logoForm.svg" alt="Logo"/>
         <Title>
           {t('title')}
