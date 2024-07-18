@@ -1,115 +1,43 @@
-// tailwind.config.js
-const {nextui} = require("@nextui-org/react");
-
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
+  darkMode: "class",
   important: true,
   content: [
-    './src/**/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/shared/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     './node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js',
   ],
-  plugins: [
-    nextui({
-      themes: {
-        "dark": {
-          extend: "dark",
-          colors: {
-            background: "#0A131C",
-            card: "#1A2F43",
-            cardHistory: "#284057",
-            cardUpload: "#E17900",
-            colorTitle: "#FFF",
-            subtTitle: "#FFF",
-            borderInput: "#284057",
-            borderInputFocus: "#47cb18",
-            buttonColor: "#E17900",
-            buttonText: "#FFF",
-            buttonBg: "#E17900",
-            buttonBgHover: "#33526F",
-            googleButtonHover: "#101E2C",
-            googleButtonColor: "#FFF",
-            googleButtonTextHover: "#FFF",
-            headerButtonColor: "#33526F",
-            headerButtonLines: "#FFF",
-            headerButtonLinesInside: "#FFF",
-            buttonConfig: "#33526F",
-            buttonConfigHover: "#E17900",
-            buttonConfigText: "#FFF",
-            buttonConfigTextHover: "#FFF",
-            buttonHomeCall: "#E17900",
-            buttonHomeCallText: "#FFF",
-            colorTb: "#FFF",
-            colorTp: "#284057",
-            primary: "#E17900",
-            error: "#E41A1A",
-            success: "#47cb18",
-            outline: "#C9CBCC",
-            input: "#33526F",
-            secondaryminus: "#33526F"
-          },
-            borderColor: {
-                primary: '#E17900',
-            },
-            screens: {
-                "max-h-640": { "raw": "(max-height: 640px)" },
-                "max-h-768": { "raw": "(max-height: 768px)" },
-                "max-h-1024": { "raw": "(max-height: 1024px)" },
-                "max-h-1280": { "raw": "(max-height: 1280px)" },
-                "max-h-1536": { "raw": "(max-height: 1536px)" },
-            }
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          100: "#FF971E",
+          200: "#E17900",
         },
-        "light": {
-          extend: "light",
-          colors: {
-            background: "#E8EAEB",
-            card: "#FFF",
-            cardHistory: "#EFF4F2",
-            cardUpload: "#0A131C",
-            colorTitle: "#0A131C",
-            borderInput: "#EFF4F2",
-            subtTitle: "#33526F",
-            colorBgField: "#FFF",
-            buttonColor: "#E17900",
-            buttonText: "#FFF",
-            buttonBg: "#E17900",
-            buttonBgHover: "#284057",
-            googleButtonHover: "#F3F3F3",
-            googleButtonColor: "#0A131C",
-            googleButtonTextHover: "#0A131C",
-            headerButtonColor: "#33526F",
-            headerButtonLines: "#FFF",
-            headerButtonLinesInside: "#0A131C",
-            buttonConfig: "#eff4f2",
-            buttonConfigHover: "#E17900",
-            buttonConfigText: "#0A131C",
-            buttonConfigTextHover: "#FFF",
-            buttonHomeCall: "#0A131C",
-            buttonHomeCallText: "#E17900",
-            colorTb: "#284057",
-            colorTp: "#284057",
-            primary: "#E17900",
-            error: "#E41A1A",
-            success: "#47cb18",
-            outline: "#C9CBCC",
-            input: "#FFF",
-            secondaryminus: "#EFF4F2"
-          },
-            borderColor: {
-                primary: '#E17900',
-            },
-            screens: {
-                "max-h-640": { "raw": "(max-height: 640px)" },
-                "max-h-768": { "raw": "(max-height: 768px)" },
-                "max-h-1024": { "raw": "(max-height: 1024px)" },
-                "max-h-1280": { "raw": "(max-height: 1280px)" },
-                "max-h-1536": { "raw": "(max-height: 1536px)" },
-            }
+        secondary: {
+          100: "#284057",
+          200: "#1A2F43",
+          300: "#0A131C",
         },
+        light: {
+          100: "#FFFFFF",
+          200: "#EFF4F2",
+          300: "#E8EAEB",
+        },
+        error: '#E41A1A',
+        success: '#47cb18',
+        outline: '#C9CBCC',
+        input: '#33526F',
       },
-    }),
-  ],
-};
+      screens: {
+        "max-h-640": { "raw": "(max-height: 640px)" },
+        "max-h-768": { "raw": "(max-height: 768px)" },
+        "max-h-1024": { "raw": "(max-height: 1024px)" },
+        "max-h-1280": { "raw": "(max-height: 1280px)" },
+        "max-h-1536": { "raw": "(max-height: 1536px)" },
+      }
+    },
+  },
+}
