@@ -5,7 +5,7 @@ type TFormContainerProps = {
 
 export default function RegisterContainer({ children, className }:TFormContainerProps) {
   return (
-    <div className={`text-center bg-light rounded-[24px] p-[40px_70px] ${className}`}>
+    <div className={`text-center bg-light-100 rounded-[24px] p-[40px_70px] ${className}`}>
       {children}
     </div>
   )

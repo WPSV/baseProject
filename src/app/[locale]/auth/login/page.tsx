@@ -67,7 +67,7 @@ export default function Login() {
               {t('linkForgotPassword')}
             </Link>
           </p>
-          <Button className="w-[142px] bg-primary-200 hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-buttonText text-sm font-bold">
+          <Button className="w-[142px] bg-primary-200 hover:bg-colorTp hover:border-transparent border border-solid border-primary-200 rounded-lg text-light-100 text-sm font-bold">
             {t('buttonText')}
           </Button>
         </form>
@@ -75,13 +75,13 @@ export default function Login() {
           Ou
         </p>
         <Button
-          className="w-full h-12 bg-light-100 hover:bg-googleButtonHover border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-googleButtonColor hover:text-googleButtonTextHover py-2.5">
+          className="w-full h-12 bg-light-100 border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-secondary-300 py-2.5">
           <img className="m-0" src="/assets/googleIcon.svg" alt="Google"/>
           {t('googleButtonText')}
         </Button>
         <p className="text-xs leading-4 tracking-wider text-secondary-400 mt-10">
           {t('registerMessage')} &nbsp;
-          <Link href={`/auth/register`} className="text-xs leading-4 tracking-wider text-primary underline">
+          <Link href={`/auth/register`} className="text-xs leading-4 tracking-wider text-primary-200 underline">
             {t('linkRegister')}
           </Link>
         </p>

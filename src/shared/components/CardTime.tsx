@@ -59,7 +59,7 @@ export default function CardTime() {
           <div className="flex justify-end">
             <div >
               <Button
-                className="w-[200px] bg-primary-200 hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-buttonText text-sm font-bold mt-5">
+                className="w-[200px] bg-primary-200 hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-light-100 text-sm font-bold mt-5">
                 {"Enviar convite"}
               </Button>
             </div>

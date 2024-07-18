@@ -16,7 +16,7 @@ export default function CardPlane() {
           <span className="text-secondary-400"><span className="font-bold mr-5">Plano atual:</span> gratuito</span>
         </div>
         <div className="flex justify-end">
-          <div ><Button className="w-[200px] bg-primary-200 hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-buttonText text-sm font-bold mt-8 mb-5">
+          <div ><Button className="w-[200px] bg-primary-200 hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-light-100 text-sm font-bold mt-8 mb-5">
             {"Mudar plano"}
           </Button></div>
         </div>
