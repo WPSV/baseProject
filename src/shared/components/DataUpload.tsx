@@ -13,7 +13,7 @@ export default function DataUpload() {
     };
 
     return (
-        <div className="w-[300px] h-[96px] p-6 rounded-lg bg-cardUpload flex  items-center cursor-pointer opacity-100" onClick={handleButtonClick}>
+        <div className="w-[300px] h-[96px] p-6 rounded-lg bg-light-100Upload flex  items-center cursor-pointer opacity-100" onClick={handleButtonClick}>
             <Image src={Update} alt="Phone icon" className="mr-4" width={24} height={24} />
             <span className="font-bold text-buttonHomeCallText">Upload de dados para a aplicação</span>
         </div>

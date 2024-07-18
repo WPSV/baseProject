@@ -17,9 +17,10 @@ module.exports = {
           200: "#E17900",
         },
         secondary: {
-          100: "#284057",
-          200: "#1A2F43",
-          300: "#0A131C",
+          100: "#33526F",
+          200: "#284057",
+          300: "#1A2F43",
+          400: "#0A131C",
         },
         light: {
           100: "#FFFFFF",
@@ -29,7 +30,6 @@ module.exports = {
         error: '#E41A1A',
         success: '#47cb18',
         outline: '#C9CBCC',
-        input: '#33526F',
       },
       screens: {
         "max-h-640": { "raw": "(max-height: 640px)" },

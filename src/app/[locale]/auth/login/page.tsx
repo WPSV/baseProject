@@ -32,7 +32,7 @@ export default function Login() {
 
   return (
     <AuthLayout>
-      <div className="bg-card dark:bg-[#ff0000] w-[534px] h-[736px] rounded-[24px] p-[40px_calc((534px-406px)/2)] text-center">
+      <div className="bg-light-100 dark:bg-secondary-300 w-[534px] h-[736px] rounded-[24px] p-[40px_calc((534px-406px)/2)] text-center">
         <img className="mt-0 mx-auto mb-[50px]" src="/assets/logoForm.svg" alt="Logo"/>
         <Title>
           {t('title')}
@@ -63,23 +63,23 @@ export default function Login() {
           />
           <p className="text-left mb-5">
             <Link href="/auth/forgotPassword/"
-                  className="text-xs leading-4 tracking-wider text-colorTitle underline">
+                  className="text-xs leading-4 tracking-wider text-secondary-400 underline">
               {t('linkForgotPassword')}
             </Link>
           </p>
-          <Button className="w-[142px] bg-buttonBg hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-buttonText text-sm font-bold">
+          <Button className="w-[142px] bg-primary-200 hover:bg-colorTp hover:border-transparent border border-solid border-primary rounded-lg text-buttonText text-sm font-bold">
             {t('buttonText')}
           </Button>
         </form>
-        <p className="text-xs font-normal leading-[18px] tracking-[0.04em] my-5 text-subtTitle text-center text-input">
+        <p className="text-xs font-normal leading-[18px] tracking-[0.04em] my-5 text-secondary-100 text-center text-input">
           Ou
         </p>
         <Button
-          className="w-full h-12 bg-card hover:bg-googleButtonHover border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-googleButtonColor hover:text-googleButtonTextHover py-2.5">
+          className="w-full h-12 bg-light-100 hover:bg-googleButtonHover border-solid border-outline text-sm font-bold leading-5 tracking-[0.02em] text-center text-googleButtonColor hover:text-googleButtonTextHover py-2.5">
           <img className="m-0" src="/assets/googleIcon.svg" alt="Google"/>
           {t('googleButtonText')}
         </Button>
-        <p className="text-xs leading-4 tracking-wider text-colorTitle mt-10">
+        <p className="text-xs leading-4 tracking-wider text-secondary-400 mt-10">
           {t('registerMessage')} &nbsp;
           <Link href={`/auth/register`} className="text-xs leading-4 tracking-wider text-primary underline">
             {t('linkRegister')}

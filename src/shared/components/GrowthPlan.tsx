@@ -32,11 +32,11 @@ export default function GrowthPlan({ data }: GrowthPlanProps) {
 
     if (!data || data.length === 0) {
         return (
-            <div className="text-colorTitle bg-card rounded-lg p-6 relative">
+            <div className="text-secondary-400 bg-light-100 rounded-lg p-6 relative">
                 <h1 className="text-xl font-bold">Planos de crescimento</h1>
                 <p className="text-sm opacity-80 mt-2">Comece a construir seu plano de ação</p>
                 <button
-                    className="absolute top-4 right-4 text-colorTitle text-sm"
+                    className="absolute top-4 right-4 text-secondary-400 text-sm"
                     onClick={handleViewMore}
                 >
                     Ver mais
@@ -46,8 +46,8 @@ export default function GrowthPlan({ data }: GrowthPlanProps) {
     }
 
     return (
-        <div className="w-full text-colorTitle p-6 rounded-lg bg-card h-72 flex flex-col">
-            <h2 className="text-xl font-bold mb-5 sticky top-0 bg-card z-10">Planos de crescimento</h2>
+        <div className="w-full text-secondary-400 p-6 rounded-lg bg-light-100 h-72 flex flex-col">
+            <h2 className="text-xl font-bold mb-5 sticky top-0 bg-light-100 z-10">Planos de crescimento</h2>
             <div className="relative flex-1 overflow-scroll">
                 <span className="relative flex ml-3 text-sm font-bold mb-4"> Data de <br /> abertura </span>
                 {data.map((item, index) => {
@@ -64,7 +64,7 @@ export default function GrowthPlan({ data }: GrowthPlanProps) {
                             {isFirstOfGroup && (
                                 <div className="absolute flex-shrink-0 ml-[6.5rem] w-4 h-4 bg-gray-400 rounded-full"></div>
                             )}
-                            <div className={`ml-8 bg-cardHistory flex-grow p-4 rounded-lg flex items-center relative ${!isFirstOfGroup && 'ml-32'}`}>
+                            <div className={`ml-8 bg-light-100History flex-grow p-4 rounded-lg flex items-center relative ${!isFirstOfGroup && 'ml-32'}`}>
                                 <div className="absolute left-[-1rem] top-0 bottom-0 border-l-2 h-[127%] border-gray-400 border-opacity-50"></div>
                                 <Image
                                     src={item.image}

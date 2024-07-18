@@ -79,7 +79,7 @@ export default function CompanyResume({ company: initialCompany, description, ta
     }, [isEditing]);
 
     return (
-        <Card className="h-40 rounded-2xl bg-card flex flex-row items-center p-4">
+        <Card className="h-40 rounded-2xl bg-light-100 flex flex-row items-center p-4">
             <Image
                 width={112}
                 height={112}
@@ -94,20 +94,20 @@ export default function CompanyResume({ company: initialCompany, description, ta
                             ref={inputRef}
                             value={tempCompany}
                             onChange={(e) => setTempCompany(e.target.value)}
-                            className="text-xl text-colorTitle"
+                            className="text-xl text-secondary-400"
                             autoFocus
                             fullWidth
                             variant="flat"
                             classNames={{
                                 inputWrapper: "border-white group-focus-within:border-white",
-                                input: "text-colorTitle",
+                                input: "text-secondary-400",
                             }}
                         />
                     ) : (
-                        <h4 className="font-bold text-xl text-colorTitle">{company}</h4>
+                        <h4 className="font-bold text-xl text-secondary-400">{company}</h4>
                     )}
                     <div onClick={handleEditClick} className="ml-2 cursor-pointer">
-                        <PencilSimple className="text-colorTitle" size={24} />
+                        <PencilSimple className="text-secondary-400" size={24} />
                     </div>
                 </CardHeader>
                 {isEditing && (
@@ -117,7 +117,7 @@ export default function CompanyResume({ company: initialCompany, description, ta
                     </div>
                 )}
                 <CardBody className="overflow-visible gap-2 py-2 px-0">
-                    <p className="text-colorTitle opacity-80 text-xs">{description}</p>
+                    <p className="text-secondary-400 opacity-80 text-xs">{description}</p>
                     <div className="flex flex-wrap gap-2 mt-2">
                         {tags.map((tag, index) => (
                             <Chip key={index} className="text-xs text-black" variant="solid" radius="full" size="lg" color={tagColors[index]}>

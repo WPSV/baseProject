@@ -44,7 +44,7 @@ export default function Input({
     base: [],
     label: ["pb-[5px]"],
     mainWrapper: [],
-    inputWrapper: [`bg-colorBgField border border-solid border-outline rounded h-14 text-colorTitle ${!description && "mb-5"} `],
+    inputWrapper: [`bg-light-100 border border-solid border-outline rounded h-14 text-secondary-400 ${!description && !errorMessage && "mb-5"} `],
     innerWrapper: [],
     input: ["placeholder-input focus:outline-none"],
     clearButton: [],

@@ -32,20 +32,20 @@ export default function App() {
       </button>
 
       <div
-        className={`flex justify-center items-center fixed h-[88px] inset-0 bg-card transform ${isOpen ? 'translate-y-0' : '-translate-y-[88px]'} transition-transform duration-200 ease-in-out z-40`}
+        className={`flex justify-center items-center fixed h-[88px] inset-0 bg-light-100 transform ${isOpen ? 'translate-y-0' : '-translate-y-[88px]'} transition-transform duration-200 ease-in-out z-40`}
       >
         <nav className="flex justify-around items-center h-full w-[1366px]">
           <div>
             <img src="/assets/logoHeader.svg" alt="logo" />
           </div>
           <ul className="flex justify-between w-[400px]">
-            <li className="text-colorTitle">{t("contactUs")}</li>
-            <li className="text-colorTitle">{t("plan")}</li>
-            <li className="text-colorTitle">{t("createAccount")}</li>
-            <li className="text-colorTitle">{t("login")}</li>
+            <li className="text-secondary-400">{t("contactUs")}</li>
+            <li className="text-secondary-400">{t("plan")}</li>
+            <li className="text-secondary-400">{t("createAccount")}</li>
+            <li className="text-secondary-400">{t("login")}</li>
           </ul>
           <div className="flex justify-between items-center">
-            <span className="mr-2.5 text-colorTitle">{t("darkMode")}</span>
+            <span className="mr-2.5 text-secondary-400">{t("darkMode")}</span>
             <div className="mr-5">
               <SwitchMode />
             </div>

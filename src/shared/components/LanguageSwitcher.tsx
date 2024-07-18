@@ -25,7 +25,7 @@ const LanguageSwitcher = () => {
     }
 
     return (
-      <select className="bg-transparent text-colorTitle" onChange={handleSelectChange} disabled={isPending} defaultValue={locale}>
+      <select className="bg-transparent text-secondary-400" onChange={handleSelectChange} disabled={isPending} defaultValue={locale}>
         {locales.map((cur) => (
           <option key={cur} value={cur}>
             {cur.toUpperCase()}
