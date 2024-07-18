@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import { nextui } from "@nextui-org/theme";
+
 module.exports = {
   darkMode: "class",
   important: true,
@@ -11,6 +13,7 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     './node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js',
   ],
+  plugins: [nextui()],
   theme: {
     extend: {
       colors: {
