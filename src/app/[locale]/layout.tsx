@@ -5,8 +5,6 @@ import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { NextUIProvider } from "@nextui-org/system";
 import ReduxProvider from "@/shared/components/ReduxProvider";
 
-import ThemeProvider from "./providers";
-
 export const metadata: Metadata = {
   title: 'Radar - GT Group',
   description: '',
@@ -25,9 +23,7 @@ export default function LocaleLayout({ children, params: { locale } } : TLocaleL
         <NextIntlClientProvider messages={messages} locale={locale}>
           <NextUIProvider>
             <ReduxProvider>
-              <ThemeProvider>
-                {children}
-              </ThemeProvider>
+              {children}
             </ReduxProvider>
           </NextUIProvider>
         </NextIntlClientProvider>

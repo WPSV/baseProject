@@ -45,7 +45,6 @@ const registerFormSlice = createSlice({
           [name]: value,
         };
       } else {
-        console.log(JSON.stringify(state, null, 2));
         return {
           ...state,
           [name]: value !== "" ? [value] : [],
