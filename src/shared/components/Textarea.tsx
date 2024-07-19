@@ -36,7 +36,7 @@ export default function Textarea({
   const defaultClassNames = {
     base: [],
     label: ["text-left"],
-    inputWrapper: ["data-[hover]:bg-light group-data-[focus]:bg-light bg-light border border-solid border-outline rounded h-full"],
+    inputWrapper: ["bg-light-100 dark:bg-secondary-200 border border-solid border-outline rounded h-full"],
     input: ["focus:outline-none placeholder-input"],
     description: [],
     errorMessage: [],

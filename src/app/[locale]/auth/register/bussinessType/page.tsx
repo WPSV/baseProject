@@ -46,7 +46,7 @@ export default function Page() {
           <SubTitle>
             {t("subTitle")}
           </SubTitle>
-          <p className="text-left font-bold text-dark leading-[24px] mb-2.5">
+          <p className="text-left font-bold text-secondary-300 dark:text-light-100 leading-[24px] mb-2.5">
             {t("label")}
           </p>
           <div className={`w-full flex flex-wrap text-left ${itemsSelected.length > 0 && "mb-5"}`}>

@@ -33,79 +33,80 @@ export default function Register() {
   return (
     <AuthLayout>
       <RegisterLayout>
-        <div className="w-full flex justify-center mb-10">
-          <RegisterContainer className="w-[534px]">
-            <form className="w-full">
-              <Title className="mb-[60px]">
-                {t("title")}
-              </Title>
+        <RegisterContainer className="w-[534px]">
+          <form className="w-full">
+            <Title className="mb-[60px]">
+              {t("title")}
+            </Title>
+            <Input
+              type="text"
+              name="company"
+              label={t("companyName")}
+              labelPlacement="outside"
+              placeholder=" "
+              isRequired
+              onChange={handleChange}
+            />
+            <div className="flex gap-[10px]">
+              <Select
+                name="localization"
+                label={t("localization")}
+                labelPlacement="outside"
+                placeholder="Selecionar"
+                items={itemsSelect}
+                onChange={handleChange}
+                classNames={{
+                  base: ["w-2/5"]
+                }}
+              />
               <Input
                 type="text"
-                name="company"
-                label={t("companyName")}
+                name="url"
+                label={t("url")}
                 labelPlacement="outside"
                 placeholder=" "
                 isRequired
                 onChange={handleChange}
+                classNames={{
+                  base: ["w-3/5"]
+                }}
               />
-              <div className="flex gap-[10px]">
-                <Select
-                  name="localization"
-                  label={t("localization")}
-                  labelPlacement="outside"
-                  placeholder="Selecionar"
-                  items={itemsSelect}
-                  onChange={handleChange}
-                  classNames={{
-                    base: ["w-2/5"]
-                  }}
-                />
-                <Input
-                  type="text"
-                  name="url"
-                  label={t("url")}
-                  labelPlacement="outside"
-                  placeholder=" "
-                  isRequired
-                  onChange={handleChange}
-                  classNames={{
-                    base: ["w-3/5"]
-                  }}
-                />
-              </div>
-              <Textarea
-                name="businessDescription"
-                label={t("descriptionBussiness")}
-                labelPlacement="outside"
-                placeholder=" "
-                minRows={5}
+            </div>
+            <Textarea
+              name="businessDescription"
+              label={t("descriptionBussiness")}
+              labelPlacement="outside"
+              placeholder=" "
+              minRows={5}
+              onChange={handleChange}
+            />
+            <div className="flex justify-between mt-5 text-secondary-300">
+              <p className="text-[10px] leading-4 tracking-[0.04em] text-left">
+                {t("description")}
+              </p>
+              <p className="w-[140px] text-xs leading-4 text-right">
+                0/800
+              </p>
+            </div>
+            <div className="text-center mt-5">
+              <Checkbox
+                name="termsOfUse"
+                checked={formData.termsOfUse}
                 onChange={handleChange}
-              />
-              <div className="flex justify-between mt-5">
-                <p className="text-[10px] leading-4 tracking-[0.04em] text-left text-dark">
-                  {t("description")}
-                </p>
-                <p className="w-[140px] text-xs leading-4 text-right text-dark">
-                  0/800
-                </p>
-              </div>
-              <div className="text-center mt-5">
-                <Checkbox
-                  name="termsOfUse"
-                  checked={formData.termsOfUse}
-                  onChange={handleChange}
-                  classNames={{
-                    label: ["text-xs leading-[16px] tracking-[0.04em] text-darkPlus"]
-                  }}
-                >
-                  {t("agreement")} &nbsp;
-                  <span className="text-primary underline">{t("useTerms")}</span>
-                </Checkbox>
-              </div>
-              <ButtonsSection prevLink="/auth/login" nextLink="/oportunidades" justifyContent="justify-around" />
-            </form>
-          </RegisterContainer>
-        </div>
+                classNames={{
+                  base: [],
+                  wrapper: [""],
+                  icon: [""],
+                  label: ["text-xs leading-[16px] tracking-[0.04em] text-secondary-400"]
+                }}
+              >
+                <span className="dark:text-light-100">{t("agreement")} &nbsp;</span>
+                <span className="text-primary-200 underline">{t("useTerms")}</span>
+              </Checkbox>
+            </div>
+            <ButtonsSection prevLink="/auth/login" nextLink="/oportunidades" justifyContent="justify-around" />
+          </form>
+        </RegisterContainer>
       </RegisterLayout>
     </AuthLayout>
   )

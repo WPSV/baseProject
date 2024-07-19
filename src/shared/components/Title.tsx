@@ -7,7 +7,7 @@ type TTitleProps = {
 
 export default function Title({children, className}: TTitleProps) {
   return (
-    <h1 className={`text-2xl font-bold leading-7 text-center text-secondary-400 ${className}`}>
+    <h1 className={`text-2xl font-bold leading-7 text-center text-secondary-400 dark:text-light-100 ${className}`}>
       {children}
     </h1>
   )

@@ -15,7 +15,7 @@ type TButtonProps = {
 }
 
 export default function Input({children, href, isDisabled, isLoading, spinner, startContent, endContent, isIconOnly, className}: TButtonProps) {
-  const defaultClassNames = "h-14 bg-primary border border-solid border-primary rounded-lg text-light text-sm font-bold";
+  const defaultClassNames = "h-14 bg-primary-200 border border-solid border-primary-200 rounded-lg text-light-100 text-sm font-bold";
   
   const combinedClassNames = `${defaultClassNames} ${className} ${isDisabled && "cursor-not-allowed"}`.trim();
   

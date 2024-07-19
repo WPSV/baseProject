@@ -14,27 +14,10 @@
     "linkForgotPassword": "Esqueci minha senha",
     "buttonText": "Entrar",
     "googleButtonText": "Login com o Google",
-    "registerMessage": "Não possui uma conta?",
-    "linkRegister": "Realize seu cadastro aqui!",
+    "registerMessage": "Não possui uma conta? Realize seu",
+    "linkRegister": "cadastro aqui!",
     "wrongPassword": "Senha inválida, tente novamente",
     "wrongEmail": "E-mail inválido, tente novamente"
-  },
-  "YourBussiness": {
-    "title": "Onde você está procurando oportunidades?",
-    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
-    "label": "Oportunidades em",
-    "description": "Por favor selecione a região de aplicação. Projeto são registrados no país de origem do negócio."
-  },
-  "Actuation": {
-    "title": "Em qual indústria sua companhia está atuando?",
-    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
-    "label": "Sua indústria",
-    "description": "Você pode adicionar todas as industrias que possam ser relevantes para seu negócio."
-  },
-  "BussinessType": {
-    "title": "Em qual indústria sua companhia está atuando?",
-    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
-    "label": "Sua indústria"
   },
   "YourBussiness": {
     "title": "Onde você está procurando oportunidades?",

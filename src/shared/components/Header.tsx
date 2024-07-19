@@ -2,12 +2,15 @@
 
 import React from "react";
 import LanguageSwitcher from "@/shared/components/LanguageSwitcher";
-import styles from "@/styles/header.module.css";
 import { useTranslations } from "next-intl";
-import SwitchMode from "@/app/[locale]/switchMode";
+import SwitchMode from "@/shared/components/SwitchMode";
+import { List, X } from "@phosphor-icons/react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 export default function App() {
   const t = useTranslations("Header");
+  const isDarkMode = useSelector((state: RootState) => state.darkMode.isDarkMode);
 
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -21,31 +24,26 @@ export default function App() {
         className="fixed top-4 right-4 z-50 focus:outline-none"
         onClick={handleToggle}
       >
-        <div className={`space-y-1 flex flex-col justify-center items-center h-[50px] w-[50px] rounded-full border ${isOpen ? "border-headerButtonColor" : "border-headerButtonColor"}`}>
-          <div
-            className={`w-[17px] h-[1px] transform transition-transform duration-200 ease-in-out ${isOpen ? `bg-headerButtonLinesInside ${styles.lineUp}` : 'bg-headerButtonLines'}`} />
-          <div
-            className={`w-[17px] h-[1px] transition-opacity duration-200 ease-in-out ${isOpen ? 'bg-headerButtonColor opacity-0' : 'bg-headerButtonLines'}`} />
-          <div
-            className={`w-[17px] h-[1px] transform transition-transform duration-200 ease-in-out ${isOpen ? `bg-headerButtonLinesInside ${styles.lineDown}` : 'bg-headerButtonLines'}`} />
+        <div className={`space-y-1 flex flex-col justify-center items-center h-[50px] w-[50px] rounded-full border ${isOpen ? "border-light-300" : "border-secondary-300"}`}>
+          {isOpen ? <X className="text-secondary-400 dark:text-light-100" size={24} /> : <List className="text-light-100" size={24} />}
         </div>
       </button>
 
       <div
-        className={`flex justify-center items-center fixed h-[88px] inset-0 bg-light-100 transform ${isOpen ? 'translate-y-0' : '-translate-y-[88px]'} transition-transform duration-200 ease-in-out z-40`}
+        className={`flex justify-center items-center fixed h-[88px] inset-0 bg-light-100 dark:bg-secondary-400 transform ${isOpen ? 'translate-y-0' : '-translate-y-[88px]'} transition-transform duration-200 ease-in-out z-40`}
       >
         <nav className="flex justify-around items-center h-full w-[1366px]">
           <div>
-            <img src="/assets/logoHeader.svg" alt="logo" />
+            <img src={`/assets/${isDarkMode ? "logoHeaderDark" : "logoHeader"}.svg`} alt="logo" />
           </div>
-          <ul className="flex justify-between w-[400px]">
-            <li className="text-secondary-400">{t("contactUs")}</li>
-            <li className="text-secondary-400">{t("plan")}</li>
-            <li className="text-secondary-400">{t("createAccount")}</li>
-            <li className="text-secondary-400">{t("login")}</li>
+          <ul className="flex justify-between w-[400px] text-secondary-400 dark:text-light-100">
+            <li>{t("contactUs")}</li>
+            <li>{t("plan")}</li>
+            <li>{t("createAccount")}</li>
+            <li>{t("login")}</li>
           </ul>
           <div className="flex justify-between items-center">
-            <span className="mr-2.5 text-secondary-400">{t("darkMode")}</span>
+            <span className="mr-2.5 text-secondary-400 dark:text-light-100">{t("darkMode")}</span>
             <div className="mr-5">
               <SwitchMode />
             </div>
