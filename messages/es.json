@@ -1,34 +1,8 @@
 {
-    "Header": {
-        "contactUs": "Contáctenos",
-        "plan": "Planes",
-        "createAccount": "Crea una cuenta",
-        "login": "Acceso",
-        "darkMode": "Modo oscuro"
-    },
-    "Login": {
-        "title": "¡Bienvenido!",
-        "subTitle": "Es hora de “Impulsar tu inspiración” con GT Group.",
-        "inputEmail": "Su e-mail",
-        "inputPassword": "Su contraseña",
-        "linkForgotPassword": "Olvide mi contraseña",
-        "buttonText": "Acceso",
-        "googleButtonText": "Iniciar sesión con Google",
-        "registerMessage": "¿No tienes una cuenta?",
-        "linkRegister": "¡Registrar aquí!",
-        "wrongPassword": "Contraseña no válida, vuelva a intentarlo",
-        "wrongEmail": "E-mail no válido, vuelva a intentarlo"
-    },
-    "ForgotPassword": {
-        "title": "¿Perdiste tu contraseña?",
-        "subTitle": "Ingresa la dirección de correo electrónico registrada en tu cuenta y te enviaremos un enlace con instrucciones.",
-        "inputEmail": "Su e-mail",
-        "buttonText": "Enviar"
-    },
-    "NotFoundPage": {
-        "message": "¡Pagina no encontrada!"
-    },
-    "BackPage": {
-        "message": "Volver a home"
-    }
+  "Home": {
+    "title": "Contador"
+  },
+  "NotFoundPage": {
+    "message": "¡Pagina no encontrada!"
+  }
 }

@@ -1,13 +1,9 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import registerStep from "./slices/registerStepsSlice";
-import registerForms from "./slices/registerFormsSlice";
-import darkMode from "./slices/darkModeSlice";
+import countSlice from "./slices/countSlice"
 
 const rootReducer = combineReducers({
-  registerSteps: registerStep,
-  registerForms: registerForms,
-  darkMode: darkMode
+  countSlice: countSlice
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

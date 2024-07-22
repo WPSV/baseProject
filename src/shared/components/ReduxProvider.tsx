@@ -8,7 +8,7 @@ type TReduxProviderProps = {
   children: React.ReactNode;
 }
 
-export default function ReduxProvider({ children } : TReduxProviderProps) {
+export default function ReduxProvider({ children }: TReduxProviderProps) {
   return (
     <Provider store={store}>
       {children}

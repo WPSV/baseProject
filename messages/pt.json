@@ -1,76 +1,8 @@
 {
-  "Header": {
-    "contactUs": "Contate-nos",
-    "plan": "Planos",
-    "createAccount": "Criar conta",
-    "login": "Login",
-    "darkMode": "Modo escuro"
-  },
-  "Login": {
-    "title": "Bem-vindo!",
-    "subTitle": "Está na hora de “Impulsionar sua aspiração” com a GT Group.",
-    "inputEmail": "Seu e-mail",
-    "inputPassword": "Sua senha",
-    "linkForgotPassword": "Esqueci minha senha",
-    "buttonText": "Entrar",
-    "googleButtonText": "Login com o Google",
-    "registerMessage": "Não possui uma conta? Realize seu",
-    "linkRegister": "cadastro aqui!",
-    "wrongPassword": "Senha inválida, tente novamente",
-    "wrongEmail": "E-mail inválido, tente novamente"
-  },
-  "YourBussiness": {
-    "title": "Onde você está procurando oportunidades?",
-    "companyName": "Nome da companhia",
-    "localization": "Localização",
-    "url": "URL do negócio",
-    "descriptionBussiness": "O que você faz?",
-    "description": "Insira um breve brief descrevendo as atividades e missões realizadas por seu negócio.",
-    "agreement": "Concordo com os",
-    "useTerms": "termos de uso"
-  },
-  "Opportunities": {
-    "title": "Onde você está procurando oportunidades?",
-    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
-    "label": "Oportunidades em",
-    "options": "Escolha as opções",
-    "description": "Por favor selecione a região de aplicação. Projeto são registrados no país de origem do negócio."
-  },
-  "Actuation": {
-    "title": "Em qual indústria sua companhia está atuando?",
-    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
-    "label": "Sua indústria",
-    "options": "Escolha as opções",
-    "description": "Você pode adicionar todas as industrias que possam ser relevantes para seu negócio."
-  },
-  "BussinessType": {
-    "title": "Em qual indústria sua companhia está atuando?",
-    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita.",
-    "label": "Sua indústria",
-    "options": "Escolha as opções"
-  },
-  "Preferences": {
-    "title": "Quais oportunidades vocês está buscando?",
-    "subTitle": "Selecione todas que fazem parte do seu ciclo de interesse."
-  },
-  "Expectations": {
-    "title": "Quais são as principais expectativas para o próximo ano?",
-    "subTitle": "Nós queremos ter certeza que seu match será uma oportunidade perfeita."
-  },
-  "Success": {
-    "title": "Sucesso, seja bem-vindo!",
-    "subTitle": "Explore as oportunidades personalizadas para seu negócios e de um boost no seu ano."
-  },
-  "ForgotPassword": {
-    "title": "Perdeu sua senha?",
-    "subTitle": "Informe o e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.",
-    "inputEmail": "Seu email",
-    "buttonText": "Enviar"
+  "Home": {
+    "title": "Contador!"
   },
   "NotFoundPage": {
     "message": "Página não encontrada!"
-  },
-  "BackPage": {
-    "message": "Voltar para home"
   }
 }

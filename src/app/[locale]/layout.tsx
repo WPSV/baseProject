@@ -6,7 +6,7 @@ import { NextUIProvider } from "@nextui-org/system";
 import ReduxProvider from "@/shared/components/ReduxProvider";
 
 export const metadata: Metadata = {
-  title: 'Radar - GT Group',
+  title: '',
   description: '',
 }
 
@@ -14,6 +14,7 @@ type TLocaleLayout = {
   children: React.ReactNode;
   params: { locale: string };
 }
+
 export default function LocaleLayout({ children, params: { locale } } : TLocaleLayout) {
   const messages = useMessages();
     
