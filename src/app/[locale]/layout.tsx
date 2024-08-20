@@ -1,9 +1,8 @@
-import React from "react";
-import '@/styles/globals.css';
+import React from 'react'
+import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import { NextIntlClientProvider, useMessages } from 'next-intl';
-import { NextUIProvider } from "@nextui-org/system";
-import ReduxProvider from "@/shared/components/ReduxProvider";
+import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { NextUIProvider } from '@nextui-org/system'
 
 export const metadata: Metadata = {
   title: '',
@@ -11,24 +10,23 @@ export const metadata: Metadata = {
 }
 
 type TLocaleLayout = {
-  children: React.ReactNode;
-  params: { locale: string };
+  children: React.ReactNode
+  params: { locale: string }
 }
 
-export default function LocaleLayout({ children, params: { locale } } : TLocaleLayout) {
-  const messages = useMessages();
-    
+export default function LocaleLayout({
+  children,
+  params: { locale },
+}: TLocaleLayout) {
+  const messages = useMessages()
+
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <NextUIProvider>
-            <ReduxProvider>
-              {children}
-            </ReduxProvider>
-          </NextUIProvider>
+          <NextUIProvider>{children}</NextUIProvider>
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+  )
 }

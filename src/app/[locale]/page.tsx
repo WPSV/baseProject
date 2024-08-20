@@ -1,24 +1,27 @@
 'use client'
 
-import { useTranslations } from "next-intl";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "@/store/store";
-import { increment, decrement, reset, incrementByAmount } from "@/store/slices/countSlice";
+import { useLayoutEffect } from 'react'
+import { useTranslations } from 'next-intl'
+import { Button } from '@nextui-org/react'
+import { useCounterStore } from '@/store/counterStore'
+import { useDarkModeStore } from '@/store/darkModeStore'
 
 export default function Page() {
-  const t = useTranslations("Home");
-  
-  const count = useSelector((state: RootState) => state.countSlice.value);
-  const dispatch = useDispatch();
-  
+  const t = useTranslations('Home')
+  const { count, inc } = useCounterStore()
+  const { isDarkMode, setDarkMode, initializeDarkMode } = useDarkModeStore()
+
+  useLayoutEffect(() => {
+    initializeDarkMode()
+  }, [initializeDarkMode])
+
   return (
-    <>
-      {t("title")}
+    <main className="dark:bg-black dark:text-red-700">
+      <div>{isDarkMode ? 'Dark Mode on' : 'Dark Mode off'}</div>
+      <div>{t('title')}</div>
       <h1>Count: {count}</h1>
-      <button className="" onClick={() => dispatch(increment())}>Increment</button>
-      <button className="" onClick={() => dispatch(decrement())}>Decrement</button>
-      <button className="" onClick={() => dispatch(reset())}>Reset</button>
-      <button className="" onClick={() => dispatch(incrementByAmount(5))}>Increment by 5</button>
-    </>
+      <Button onClick={inc}>Increment</Button>
+      <Button onClick={() => setDarkMode(!isDarkMode)}>Dark Mode</Button>
+    </main>
   )
 }
